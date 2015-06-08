@@ -1,15 +1,14 @@
 //
-//  MenuViewController.swift
+//  CarViewController.swift
 //  posto
 //
 //  Created by Davi Rodrigues on 08/06/15.
 //  Copyright (c) 2015 Davi Rodrigues. All rights reserved.
 //
 
-
 import UIKit
 
-class MenuViewController: UIViewController {
+class CarViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,9 +31,5 @@ class MenuViewController: UIViewController {
     // Pass the selected object to the new view controller.
     }
     */
-    
-    @IBAction func returnToMenu (segue: UIStoryboardSegue) {
-        
-    }
     
 }

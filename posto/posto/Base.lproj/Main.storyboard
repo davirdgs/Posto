@@ -4,6 +4,40 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
+        <!--Car View Controller-->
+        <scene sceneID="Jgt-tn-dgb">
+            <objects>
+                <viewController id="URe-M8-4P9" customClass="CarViewController" customModule="posto" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iOB-wU-EzI"/>
+                        <viewControllerLayoutGuide type="bottom" id="dbd-ut-alw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f5u-Nm-SNd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fCb-fO-Kh4">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Meu Carro" id="DJg-uW-gaw">
+                                        <barButtonItem key="leftBarButtonItem" title="Voltar" id="bcO-4o-TKI">
+                                            <connections>
+                                                <segue destination="3sT-Hg-Nvd" kind="unwind" unwindAction="returnToMenu:" id="jUK-r2-M82"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z6l-zi-c6O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="3sT-Hg-Nvd" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1245.5" y="136.5"/>
+        </scene>
         <!--Menu View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -26,6 +60,9 @@
                                         <state key="normal" title="Meu Carro">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="URe-M8-4P9" kind="show" id="3qZ-tm-UHr"/>
+                                        </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Car" translatesAutoresizingMaskIntoConstraints="NO" id="oOG-Ld-4bd">
                                         <rect key="frame" x="0.0" y="0.0" width="125" height="111"/>
@@ -55,6 +92,9 @@
                                         <state key="normal" title="Combustível">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="frC-hj-kNo" kind="show" id="SPC-K8-4ns"/>
+                                        </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gas_station" translatesAutoresizingMaskIntoConstraints="NO" id="BuJ-pz-etV">
                                         <rect key="frame" x="0.0" y="0.0" width="124" height="111"/>
@@ -84,6 +124,9 @@
                                         <state key="normal" title="Manutenção">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="UDI-Px-puz" kind="show" id="t63-VF-dmn"/>
+                                        </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tools" translatesAutoresizingMaskIntoConstraints="NO" id="BQy-PM-GSA">
                                         <rect key="frame" x="0.0" y="0.0" width="124" height="111"/>
@@ -125,7 +168,73 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="796" y="683"/>
+            <point key="canvasLocation" x="731.5" y="690.5"/>
+        </scene>
+        <!--Maintenance View Controller-->
+        <scene sceneID="S2P-gt-Rb9">
+            <objects>
+                <viewController id="UDI-Px-puz" customClass="MaintenanceViewController" customModule="posto" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i0n-l6-xka"/>
+                        <viewControllerLayoutGuide type="bottom" id="dVa-eR-mzG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dBf-jO-fBH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QNx-c8-Itn">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Manutenção" id="7bs-oo-XaJ">
+                                        <barButtonItem key="leftBarButtonItem" title="Voltar" id="Cs4-sk-K00">
+                                            <connections>
+                                                <segue destination="6Pf-ac-jxu" kind="unwind" unwindAction="returnToMenu:" id="PPf-KV-Lft"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yin-zj-eGQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="6Pf-ac-jxu" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="731.5" y="1525.5"/>
+        </scene>
+        <!--Gas View Controller-->
+        <scene sceneID="tJJ-9g-vna">
+            <objects>
+                <viewController id="frC-hj-kNo" customClass="GasViewController" customModule="posto" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cz9-n9-jZ0"/>
+                        <viewControllerLayoutGuide type="bottom" id="HQM-Cs-Rjd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bAv-SV-ccv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1MG-jp-gIJ">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Combustível" id="GOv-fY-YZz">
+                                        <barButtonItem key="leftBarButtonItem" title="Voltar" id="Msf-UA-YNb">
+                                            <connections>
+                                                <segue destination="T0v-Ue-WXt" kind="unwind" unwindAction="returnToMenu:" id="Lld-BV-ux6"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zFx-XL-hXW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="T0v-Ue-WXt" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1245.5" y="881.5"/>
         </scene>
     </scenes>
     <resources>
