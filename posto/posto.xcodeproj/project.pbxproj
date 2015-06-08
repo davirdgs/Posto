@@ -14,6 +14,7 @@
 		552A15B81B25D9EA0092A01A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552A15B71B25D9EA0092A01A /* Images.xcassets */; };
 		552A15BB1B25D9EA0092A01A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 552A15B91B25D9EA0092A01A /* LaunchScreen.xib */; };
 		552A15C71B25D9EA0092A01A /* postoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552A15C61B25D9EA0092A01A /* postoTests.swift */; };
+		55F58F921B25F8DB00DC2CC3 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F58F911B25F8DB00DC2CC3 /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		552A15C01B25D9EA0092A01A /* postoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = postoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		552A15C51B25D9EA0092A01A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		552A15C61B25D9EA0092A01A /* postoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postoTests.swift; sourceTree = "<group>"; };
+		55F58F911B25F8DB00DC2CC3 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = Controllers/MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		552A15AA1B25D9EA0092A01A /* posto */ = {
 			isa = PBXGroup;
 			children = (
+				55F58F931B25F8E600DC2CC3 /* Controllers */,
 				552A15AD1B25D9EA0092A01A /* AppDelegate.swift */,
 				552A15B21B25D9EA0092A01A /* ViewController.swift */,
 				552A15B41B25D9EA0092A01A /* Main.storyboard */,
@@ -113,6 +116,14 @@
 				552A15C51B25D9EA0092A01A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		55F58F931B25F8E600DC2CC3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				55F58F911B25F8DB00DC2CC3 /* MenuViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +229,7 @@
 				552A15B31B25D9EA0092A01A /* ViewController.swift in Sources */,
 				552A15AE1B25D9EA0092A01A /* AppDelegate.swift in Sources */,
 				552A15B11B25D9EA0092A01A /* posto.xcdatamodeld in Sources */,
+				55F58F921B25F8DB00DC2CC3 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +425,7 @@
 				552A15CC1B25D9EA0092A01A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		552A15CD1B25D9EA0092A01A /* Build configuration list for PBXNativeTarget "postoTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +434,7 @@
 				552A15CF1B25D9EA0092A01A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
