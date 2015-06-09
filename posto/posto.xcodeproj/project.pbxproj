@@ -18,6 +18,7 @@
 		55F58F951B260B4C00DC2CC3 /* CarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F58F941B260B4C00DC2CC3 /* CarViewController.swift */; };
 		55F58F971B260B7900DC2CC3 /* GasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F58F961B260B7900DC2CC3 /* GasViewController.swift */; };
 		55F58F991B260C0B00DC2CC3 /* MaintenanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F58F981B260C0B00DC2CC3 /* MaintenanceViewController.swift */; };
+		633FE46C1B270BBD0094F9CF /* GasCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633FE46B1B270BBD0094F9CF /* GasCalculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		55F58F941B260B4C00DC2CC3 /* CarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarViewController.swift; path = Controllers/CarViewController.swift; sourceTree = "<group>"; };
 		55F58F961B260B7900DC2CC3 /* GasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GasViewController.swift; path = Controllers/GasViewController.swift; sourceTree = "<group>"; };
 		55F58F981B260C0B00DC2CC3 /* MaintenanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MaintenanceViewController.swift; path = Controllers/MaintenanceViewController.swift; sourceTree = "<group>"; };
+		633FE46B1B270BBD0094F9CF /* GasCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GasCalculator.swift; path = Model/GasCalculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				55F58F931B25F8E600DC2CC3 /* Controllers */,
 				552A15AD1B25D9EA0092A01A /* AppDelegate.swift */,
 				552A15B21B25D9EA0092A01A /* ViewController.swift */,
+				633FE46B1B270BBD0094F9CF /* GasCalculator.swift */,
 				552A15B41B25D9EA0092A01A /* Main.storyboard */,
 				552A15B71B25D9EA0092A01A /* Images.xcassets */,
 				552A15B91B25D9EA0092A01A /* LaunchScreen.xib */,
@@ -238,6 +241,7 @@
 				55F58F971B260B7900DC2CC3 /* GasViewController.swift in Sources */,
 				55F58F991B260C0B00DC2CC3 /* MaintenanceViewController.swift in Sources */,
 				55F58F951B260B4C00DC2CC3 /* CarViewController.swift in Sources */,
+				633FE46C1B270BBD0094F9CF /* GasCalculator.swift in Sources */,
 				552A15B31B25D9EA0092A01A /* ViewController.swift in Sources */,
 				552A15AE1B25D9EA0092A01A /* AppDelegate.swift in Sources */,
 				552A15B11B25D9EA0092A01A /* posto.xcdatamodeld in Sources */,
