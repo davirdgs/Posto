@@ -8,20 +8,70 @@
 
 import UIKit
 
-class GasViewController: UIViewController {
+class GasViewController: UIKit.UIViewController {
+    
+    @IBOutlet var textGasValue : UITextField!
+    @IBOutlet var textGnvOrEtnValue: UITextField!
+    @IBOutlet var labelResult : UILabel!
+    
+            //let valResult = GasCalculatorModel(valGas: 0.00 , valEnt: 0.00)
+    
+    
+    
+  
+    
+    func refreshValues(){
+       
+ 
+        
+         // tipCalc.total = Double((totalTextField.text as NSString).doubleValue)
+        
+        textGasValue.text = String(format: "%0.3f", textGasValue.text)
+        textGnvOrEtnValue.text = String(format: "%0.3f", textGnvOrEtnValue.text )
+        labelResult.text = ""
 
+       
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        
+        //parra esconder a barra de busca
+        let tap = UITapGestureRecognizer(target: self, action:"dismissKeyboard")
+        view.addGestureRecognizer(tap)
+        
+        
+         refreshValues()
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
+    @IBAction func buttonCalculate(sender: AnyObject) {
+        
+      let valResult = GasCalculatorModel(valGas: Double((textGasValue.text as NSString).doubleValue), valEnt: Double((textGnvOrEtnValue.text as NSString).doubleValue))
+        
+        labelResult.text = valResult.returnResultGasOrEtn()
+        
+    }
+    
+    //abaixar teclado virtual
+    func dismissKeyboard(){
+            self.textGasValue.resignFirstResponder()
+            self.textGnvOrEtnValue.resignFirstResponder()
+    }
+    
+    
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 

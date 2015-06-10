@@ -145,7 +145,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1245.5" y="136.5"/>
+            <point key="canvasLocation" x="1565.25" y="66.5"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -202,7 +202,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="frC-hj-kNo" kind="show" id="SPC-K8-4ns"/>
+                                            <segue destination="e9e-BC-kUm" kind="show" id="IcR-9j-t2D"/>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gas_station" translatesAutoresizingMaskIntoConstraints="NO" id="BuJ-pz-etV">
@@ -310,7 +310,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yin-zj-eGQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="6Pf-ac-jxu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="731.5" y="1525.5"/>
+            <point key="canvasLocation" x="1565.25" y="1811.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wsA-cF-eJh">
+            <objects>
+                <navigationController id="e9e-BC-kUm" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VLh-2C-86N">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="frC-hj-kNo" kind="relationship" relationship="rootViewController" id="Vh4-cz-mRs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9X5-0m-exf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1575.75" y="885.5"/>
         </scene>
         <!--Gas View Controller-->
         <scene sceneID="tJJ-9g-vna">
@@ -336,13 +352,19 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gasolina" translatesAutoresizingMaskIntoConstraints="NO" id="0tQ-47-UF4">
-                                <rect key="frame" x="0.0" y="318" width="375" height="349"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gasolina" translatesAutoresizingMaskIntoConstraints="NO" id="0tQ-47-UF4">
+                                <rect key="frame" x="0.0" y="241" width="511" height="496"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gas_station1" translatesAutoresizingMaskIntoConstraints="NO" id="oZP-2V-pgA">
+                                <rect key="frame" x="24" y="116" width="137" height="96"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gmk-Bf-k6f">
                                 <rect key="frame" x="79" y="123" width="61" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="81" y="123" width="61" height="30"/>
+                                </variation>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gas_station" translatesAutoresizingMaskIntoConstraints="NO" id="HqS-Cs-O64">
                                 <rect key="frame" x="214" y="116" width="137" height="96"/>
@@ -350,7 +372,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kPA-jp-vMb">
                                 <rect key="frame" x="234" y="123" width="59" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TfO-hw-zk7">
                                 <rect key="frame" x="254" y="161" width="18" height="34"/>
@@ -377,24 +399,39 @@
                                 <state key="normal" backgroundImage="velocimetro1">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonCalculate:" destination="frC-hj-kNo" eventType="touchUpInside" id="gEG-CT-ehL"/>
+                                </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gas_station1" translatesAutoresizingMaskIntoConstraints="NO" id="oZP-2V-pgA">
-                                <rect key="frame" x="24" y="116" width="137" height="96"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8VQ-ET-DcF">
                                 <rect key="frame" x="100" y="161" width="18" height="34"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ztz-we-89W">
+                                <rect key="frame" x="38" y="584" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="49" y="247" width="294" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="I3H-R5-0ng"/>
+                    <connections>
+                        <outlet property="labelResult" destination="Ztz-we-89W" id="S3B-C7-mkw"/>
+                        <outlet property="textGasValue" destination="kPA-jp-vMb" id="drG-90-GMi"/>
+                        <outlet property="textGnvOrEtnValue" destination="Gmk-Bf-k6f" id="KRF-xr-Hie"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zFx-XL-hXW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="T0v-Ue-WXt" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1245.5" y="881.5"/>
+            <point key="canvasLocation" x="2291.25" y="885.5"/>
         </scene>
     </scenes>
     <resources>
