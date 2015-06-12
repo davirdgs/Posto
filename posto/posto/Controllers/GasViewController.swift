@@ -8,11 +8,14 @@
 
 import UIKit
 
-class GasViewController: UIKit.UIViewController {
+
+
+class GasViewController: UIViewController,UITextFieldDelegate {
     
     @IBOutlet var textGasValue : UITextField!
     @IBOutlet var textGnvOrEtnValue: UITextField!
-    @IBOutlet var labelResult : UILabel!
+    
+    @IBOutlet weak var labelResult: UITextView!
     
             //let valResult = GasCalculatorModel(valGas: 0.00 , valEnt: 0.00)
     
@@ -20,30 +23,21 @@ class GasViewController: UIKit.UIViewController {
     
   
     
-    func refreshValues(){
-       
- 
-        
-         // tipCalc.total = Double((totalTextField.text as NSString).doubleValue)
-        
-        textGasValue.text = String(format: "%0.3f", textGasValue.text)
-        textGnvOrEtnValue.text = String(format: "%0.3f", textGnvOrEtnValue.text )
-        labelResult.text = ""
 
-       
-    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         //parra esconder a barra de busca
-        let tap = UITapGestureRecognizer(target: self, action:"dismissKeyboard")
-        view.addGestureRecognizer(tap)
+       // let tap = UITapGestureRecognizer(target: self, action:"dismissKeyboard")
+      //  view.addGestureRecognizer(tap)
+
+           // NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification)
         
+        UIApplication.sharedApplication().sendAction("resignFirstResponder", to:nil, from:nil, forEvent:nil)
         
-         refreshValues()
+        refreshValues()
     }
 
     
@@ -52,25 +46,88 @@ class GasViewController: UIKit.UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+
+    
+    func refreshValues(){
+        
+        
+        
+       
+    
+//    textGasValue.text = String(format: "%0.3f", textGasValue.text)
+//       textGnvOrEtnValue.text = String(format: "%0.3f", textGnvOrEtnValue.text )
+//       labelResult.text = ""
+        
+
+    }
+    
+    
+    
+    
+
+    
+//    func keyboardWillShow(notification: NSNotification) {
+//        let frame = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue
+//        // do stuff with the frame...
+//    }
+    
     
     @IBAction func buttonCalculate(sender: AnyObject) {
         
-      let valResult = GasCalculatorModel(valGas: Double((textGasValue.text as NSString).doubleValue), valEnt: Double((textGnvOrEtnValue.text as NSString).doubleValue))
+        var valGasFloat = (textGasValue.text as NSString).floatValue
+        var valGnvOrEtnFloat = (textGnvOrEtnValue.text as NSString).floatValue
+        
+        
+        
+      let valResult = GasCalculatorModel(valGas: valGasFloat, valEnt: valGnvOrEtnFloat)
         
         labelResult.text = valResult.returnResultGasOrEtn()
         
+        
+        //fechar teclado virtual
+        self.view.endEditing(true)
+        
     }
+    
+    
+    //determinar tamanho máximo dos valores
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        let newLength = count(textField.text.utf16) + count(string.utf16) - range.length
+        
+//        if newLength == 2 {
+//            textField.text.extend(".")
+//        }
+        
+  
+        
+        
+        
+        
+        return newLength <= 5 // Bool
+    }
+    
     
     //abaixar teclado virtual
-    func dismissKeyboard(){
-            self.textGasValue.resignFirstResponder()
-            self.textGnvOrEtnValue.resignFirstResponder()
+//    func dismissKeyboard(){
+//            self.textGasValue.resignFirstResponder()
+//            self.textGnvOrEtnValue.resignFirstResponder()
+//        
+//    }
+    
+    
+    @IBAction func textFieldUpInside(sender: UITextField) {
+        textGasValue.text = "0.000"
+        textGnvOrEtnValue.text = String(format: "%0.3f", textGnvOrEtnValue.text )
+        labelResult.text = ""
     }
     
-    
-    
-    
-    
+
+
+ 
+    func textFieldShouldReturn(userText: UITextField) -> Bool {
+        userText.resignFirstResponder()
+        return true;
+    }
     
     /*
     // MARK: - Navigation
