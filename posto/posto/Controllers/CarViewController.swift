@@ -34,11 +34,26 @@ class CarViewController: UIViewController, UIPickerViewDataSource, UIPickerViewD
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func backButtonHandler(sender: UIBarButtonItem) {
+    @IBAction func saveButtonHandler(sender: UIButton) {
         
+        let formatter = NSNumberFormatter()
+        let km: NSNumber
+        let oil: NSNumber
+        let inspection: NSNumber
         
+        km = formatter.numberFromString(self.kmTextField.text)!
+        oil = formatter.numberFromString(self.oilTextField.text)!
+        inspection = formatter.numberFromString(self.reviewTextField.text)!
+        
+        MyCarData.changeInspection(inspection)
+        MyCarData.changeKmValue(km)
+        MyCarData.changeOilValue(oil)
         
         MyCarData.saveValues()
+        
+        //println("Aqui")
+        
+        //NSLog(MyCarData.returnValue("km_defaults").stringValue)
     }
     
     /*
