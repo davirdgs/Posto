@@ -23,6 +23,7 @@
                                     <navigationItem title="Meu Carro" id="DJg-uW-gaw">
                                         <barButtonItem key="leftBarButtonItem" title="Voltar" id="bcO-4o-TKI">
                                             <connections>
+                                                <action selector="backButtonHandler:" destination="URe-M8-4P9" id="QJY-CE-Bti"/>
                                                 <segue destination="3sT-Hg-Nvd" kind="unwind" unwindAction="returnToMenu:" id="jUK-r2-M82"/>
                                             </connections>
                                         </barButtonItem>
@@ -97,9 +98,6 @@
                                     <outlet property="delegate" destination="URe-M8-4P9" id="3Ax-tp-l7f"/>
                                 </connections>
                             </textField>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HzT-9b-OBt">
-                                <rect key="frame" x="286" y="447" width="51" height="31"/>
-                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -132,6 +130,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="backButton" destination="bcO-4o-TKI" id="jMl-jT-4xD"/>
                         <outlet property="kmTextField" destination="vZj-yH-Lj9" id="bSu-O8-1Zq"/>
                         <outlet property="modelLabel" destination="P2c-GL-FSX" id="1Fi-YS-z4F"/>
                         <outlet property="modelPicker" destination="I0J-UT-TWr" id="IXs-e7-ft1"/>

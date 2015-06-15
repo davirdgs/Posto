@@ -20,6 +20,7 @@ class CarViewController: UIViewController, UIPickerViewDataSource, UIPickerViewD
     @IBOutlet weak var oilTextField: UITextField!
     @IBOutlet weak var reviewTextField: UITextField!
     
+    @IBOutlet weak var backButton: UIBarButtonItem!
     
     
     override func viewDidLoad() {
@@ -33,6 +34,12 @@ class CarViewController: UIViewController, UIPickerViewDataSource, UIPickerViewD
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func backButtonHandler(sender: UIBarButtonItem) {
+        
+        
+        
+        MyCarData.saveValues()
+    }
     
     /*
     // MARK: - Navigation
