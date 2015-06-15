@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 
 
@@ -15,16 +16,9 @@ class GasViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet var textGasValue : UITextField!
     @IBOutlet var textGnvOrEtnValue: UITextField!
     
-    @IBOutlet weak var labelResult: UITextView!
+    @IBOutlet weak var textResult: UITextView!
     
             //let valResult = GasCalculatorModel(valGas: 0.00 , valEnt: 0.00)
-    
-    
-    
-  
-    
-
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,12 +28,18 @@ class GasViewController: UIViewController,UITextFieldDelegate {
       //  view.addGestureRecognizer(tap)
 
            // NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification)
+        textGasValue.delegate = self
+        textGnvOrEtnValue.delegate = self
         
         UIApplication.sharedApplication().sendAction("resignFirstResponder", to:nil, from:nil, forEvent:nil)
+textGasValue.becomeFirstResponder()
         
-        refreshValues()
+        
+        //refreshValues()
     }
 
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -54,9 +54,9 @@ class GasViewController: UIViewController,UITextFieldDelegate {
         
        
     
-//    textGasValue.text = String(format: "%0.3f", textGasValue.text)
-//       textGnvOrEtnValue.text = String(format: "%0.3f", textGnvOrEtnValue.text )
-//       labelResult.text = ""
+    textGasValue.text = String(format: "%0.3f", textGasValue.text)
+       textGnvOrEtnValue.text = String(format: "%0.3f", textGnvOrEtnValue.text )
+       textResult.text = ""
         
 
     }
@@ -71,6 +71,13 @@ class GasViewController: UIViewController,UITextFieldDelegate {
 //        // do stuff with the frame...
 //    }
     
+//    var currencyFormatter: NSNumberFormatter {
+//        let formatter = NSNumberFormatter()
+//        formatter.numberStyle = .CurrencyStyle
+//        return formatter
+//    }
+
+    
     
     @IBAction func buttonCalculate(sender: AnyObject) {
         
@@ -81,7 +88,7 @@ class GasViewController: UIViewController,UITextFieldDelegate {
         
       let valResult = GasCalculatorModel(valGas: valGasFloat, valEnt: valGnvOrEtnFloat)
         
-        labelResult.text = valResult.returnResultGasOrEtn()
+        textResult.text = valResult.returnResultGasOrEtn()
         
         
         //fechar teclado virtual
@@ -89,22 +96,46 @@ class GasViewController: UIViewController,UITextFieldDelegate {
         
     }
     
+
     
-    //determinar tamanho máximo dos valores
+    
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        var result = true
+        let prospectiveText = (textField.text as NSString).stringByReplacingCharactersInRange(range, withString: string)
+        
         let newLength = count(textField.text.utf16) + count(string.utf16) - range.length
+
         
-//        if newLength == 2 {
-//            textField.text.extend(".")
-//        }
-        
-  
-        
-        
-        
-        
-        return newLength <= 5 // Bool
+        if (textField == textGasValue) || textField == textGnvOrEtnValue {
+            if count(string) > 0 {
+                if newLength == 2 {
+                            textField.text.extend(".")
+                }
+                
+                
+                
+                let disallowedCharacterSet = NSCharacterSet(charactersInString: "0123456789").invertedSet
+                let replacementStringIsLegal = string.rangeOfCharacterFromSet(disallowedCharacterSet) == nil
+                
+                let resultingStringLengthIsLegal = count(prospectiveText) <= 5
+                
+                let scanner = NSScanner(string: prospectiveText)
+                let resultingTextIsNumeric = scanner.scanDecimal(nil) && scanner.atEnd
+                
+                result = replacementStringIsLegal &&
+                    resultingStringLengthIsLegal &&
+                resultingTextIsNumeric
+                
+                
+
+            }
+        }
+        return result
     }
+
+    
+
+
     
     
     //abaixar teclado virtual
@@ -114,17 +145,10 @@ class GasViewController: UIViewController,UITextFieldDelegate {
 //        
 //    }
     
-    
-    @IBAction func textFieldUpInside(sender: UITextField) {
-        textGasValue.text = "0.000"
-        textGnvOrEtnValue.text = String(format: "%0.3f", textGnvOrEtnValue.text )
-        labelResult.text = ""
-    }
-    
 
-
- 
+    
     func textFieldShouldReturn(userText: UITextField) -> Bool {
+        
         userText.resignFirstResponder()
         return true;
     }
@@ -138,5 +162,6 @@ class GasViewController: UIViewController,UITextFieldDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+
 
 }

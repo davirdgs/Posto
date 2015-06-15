@@ -345,18 +345,17 @@
                                     <rect key="frame" x="16" y="116" width="174" height="125"/>
                                 </variation>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0.000" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gmk-Bf-k6f">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0.000" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gmk-Bf-k6f">
                                 <rect key="frame" x="79" y="123" width="61" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label=""/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="light"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="20"/>
                                     <rect key="frame" x="90" y="130" width="71" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="textFieldSelected:" destination="frC-hj-kNo" eventType="touchUpInside" id="2xe-tY-lda"/>
-                                    <action selector="textFieldUpInside:" destination="frC-hj-kNo" eventType="touchUpInside" id="kdR-H5-Dh4"/>
                                     <outlet property="delegate" destination="frC-hj-kNo" id="3vb-gB-fnh"/>
                                 </connections>
                             </textField>
@@ -366,17 +365,16 @@
                                     <rect key="frame" x="191" y="116" width="168" height="125"/>
                                 </variation>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0.000" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kPA-jp-vMb">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0.000" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kPA-jp-vMb">
                                 <rect key="frame" x="234" y="123" width="59" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="numberPad" keyboardAppearance="light"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="20"/>
                                     <rect key="frame" x="219" y="130" width="67" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="textFieldUpInside:" destination="frC-hj-kNo" eventType="editingDidEnd" id="wbE-jS-gDl"/>
                                     <outlet property="delegate" destination="frC-hj-kNo" id="5CJ-Yk-zGO"/>
                                 </connections>
                             </textField>
@@ -453,9 +451,9 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="labelResult" destination="Ugm-da-TYi" id="eNQ-9m-RGd"/>
-                        <outlet property="textGasValue" destination="kPA-jp-vMb" id="drG-90-GMi"/>
-                        <outlet property="textGnvOrEtnValue" destination="Gmk-Bf-k6f" id="KRF-xr-Hie"/>
+                        <outlet property="textGasValue" destination="Gmk-Bf-k6f" id="gyg-iA-wB3"/>
+                        <outlet property="textGnvOrEtnValue" destination="kPA-jp-vMb" id="e2d-ds-4ri"/>
+                        <outlet property="textResult" destination="Ugm-da-TYi" id="wGN-Yy-F17"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zFx-XL-hXW" userLabel="First Responder" sceneMemberID="firstResponder"/>
