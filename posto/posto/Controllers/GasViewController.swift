@@ -112,10 +112,6 @@ textGasValue.becomeFirstResponder()
                             textField.text.extend(".")
                 }
                 
-                if (textField == textGasValue.text) && (newLength == 5){
-                    //textField.resignFirstResponder()
-                   
-                }
                 
                 
                 let disallowedCharacterSet = NSCharacterSet(charactersInString: "0123456789").invertedSet

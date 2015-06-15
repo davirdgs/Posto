@@ -353,7 +353,6 @@
                                     <rect key="frame" x="90" y="130" width="71" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="textFieldChanged:" destination="frC-hj-kNo" eventType="editingChanged" id="04g-aO-c1a"/>
                                     <outlet property="delegate" destination="frC-hj-kNo" id="3vb-gB-fnh"/>
                                 </connections>
                             </textField>
