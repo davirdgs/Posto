@@ -12,7 +12,7 @@ class CarViewController: UIViewController, UIPickerViewDataSource, UIPickerViewD
 {
     @IBOutlet weak var modelPicker: UIPickerView!
     @IBOutlet weak var modelLabel: UILabel!
-    let pickerData = ["Mozzarella","Gorgonzola","Provolone","Brie","Maytag Blue","Sharp Cheddar","Monterrey Jack","Stilton","Gouda","Goat Cheese", "Asiago"]
+    let pickerData = ["Viagens curtas: menos de 5km em media", "Viagens longas: mais de 5km em media"]
     
     
     
@@ -20,6 +20,7 @@ class CarViewController: UIViewController, UIPickerViewDataSource, UIPickerViewD
     @IBOutlet weak var oilTextField: UITextField!
     @IBOutlet weak var reviewTextField: UITextField!
     
+    @IBOutlet weak var backButton: UIBarButtonItem!
     
     
     override func viewDidLoad() {
@@ -33,6 +34,27 @@ class CarViewController: UIViewController, UIPickerViewDataSource, UIPickerViewD
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func saveButtonHandler(sender: UIButton) {
+        
+        let formatter = NSNumberFormatter()
+        let km: NSNumber
+        let oil: NSNumber
+        let inspection: NSNumber
+        
+        km = formatter.numberFromString(self.kmTextField.text)!
+        oil = formatter.numberFromString(self.oilTextField.text)!
+        inspection = formatter.numberFromString(self.reviewTextField.text)!
+        
+        MyCarData.changeInspection(inspection)
+        MyCarData.changeKmValue(km)
+        MyCarData.changeOilValue(oil)
+        
+        MyCarData.saveValues()
+        
+        //println("Aqui")
+        
+        //NSLog(MyCarData.returnValue("km_defaults").stringValue)
+    }
     
     /*
     // MARK: - Navigation
