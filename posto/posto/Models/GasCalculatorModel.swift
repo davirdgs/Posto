@@ -82,13 +82,12 @@ class GasCalculatorModel: NSObject{
         let speedometerRight = SKAction.animateWithTextures([
             SKTexture(imageNamed: "vel5"),
             SKTexture(imageNamed: "vel6"),
-            SKTexture(imageNamed: "vel7"),
-            
+            SKTexture(imageNamed: "vel7")
             ], timePerFrame: 0.30)
         
         //inicializar movimento
         let run = SKAction.repeatAction(speedometerRight, count: 3)
-        //speedometer.runAction(run, withKey: "running")
+        speedometer.runAction(run)
         
     }
     
