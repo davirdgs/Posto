@@ -18,6 +18,7 @@
 		55F58F951B260B4C00DC2CC3 /* CarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F58F941B260B4C00DC2CC3 /* CarViewController.swift */; };
 		55F58F971B260B7900DC2CC3 /* GasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F58F961B260B7900DC2CC3 /* GasViewController.swift */; };
 		55F58F991B260C0B00DC2CC3 /* MaintenanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F58F981B260C0B00DC2CC3 /* MaintenanceViewController.swift */; };
+		631363481B305EDE00BD009E /* speedometer.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 631363471B305EDE00BD009E /* speedometer.atlas */; };
 		633FE4721B27AE990094F9CF /* GasCalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633FE4711B27AE990094F9CF /* GasCalculatorModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		55F58F941B260B4C00DC2CC3 /* CarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarViewController.swift; path = Controllers/CarViewController.swift; sourceTree = "<group>"; };
 		55F58F961B260B7900DC2CC3 /* GasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GasViewController.swift; path = Controllers/GasViewController.swift; sourceTree = "<group>"; };
 		55F58F981B260C0B00DC2CC3 /* MaintenanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MaintenanceViewController.swift; path = Controllers/MaintenanceViewController.swift; sourceTree = "<group>"; };
+		631363471B305EDE00BD009E /* speedometer.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = speedometer.atlas; path = ../../speedometer.atlas; sourceTree = "<group>"; };
 		633FE4711B27AE990094F9CF /* GasCalculatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GasCalculatorModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				633FE4711B27AE990094F9CF /* GasCalculatorModel.swift */,
+				631363471B305EDE00BD009E /* speedometer.atlas */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				552A15B61B25D9EA0092A01A /* Main.storyboard in Resources */,
 				552A15BB1B25D9EA0092A01A /* LaunchScreen.xib in Resources */,
 				552A15B81B25D9EA0092A01A /* Images.xcassets in Resources */,
+				631363481B305EDE00BD009E /* speedometer.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -54,9 +54,9 @@ textGasValue.becomeFirstResponder()
         
        
     
-    textGasValue.text = String(format: "%0.3f", textGasValue.text)
-       textGnvOrEtnValue.text = String(format: "%0.3f", textGnvOrEtnValue.text )
-       textResult.text = ""
+//    textGasValue.text = String(format: "%0.3f", textGasValue.text)
+//       textGnvOrEtnValue.text = String(format: "%0.3f", textGnvOrEtnValue.text )
+//       textResult.text = ""
         
 
     }
@@ -81,12 +81,12 @@ textGasValue.becomeFirstResponder()
     
     @IBAction func buttonCalculate(sender: AnyObject) {
         
-        var valGasFloat = (textGasValue.text as NSString).floatValue
-        var valGnvOrEtnFloat = (textGnvOrEtnValue.text as NSString).floatValue
+        var valGasDouble = Float((textGasValue.text as NSString).floatValue)
+        var valGnvOrEtnDouble = Float((textGnvOrEtnValue.text as NSString).floatValue)
         
         
         
-      let valResult = GasCalculatorModel(valGas: valGasFloat, valEnt: valGnvOrEtnFloat)
+      var valResult = GasCalculatorModel(valGas: valGasDouble, valEnt: valGnvOrEtnDouble)
         
         textResult.text = valResult.returnResultGasOrEtn()
         
