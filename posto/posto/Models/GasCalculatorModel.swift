@@ -15,8 +15,6 @@ class GasCalculatorModel: NSObject{
     var valGas: Float
     var valEtn: Float
     
-    // atlas do velocimetro
-    let speedometerAtlas = SKTextureAtlas(named: "speedometer.atlas")
     var speedometer: SKSpriteNode!
   
     
@@ -44,10 +42,16 @@ class GasCalculatorModel: NSObject{
     
     func returnResultGasOrEtn() -> String{
         
+
+                //speedometer = SKSpriteNode(texture: SKTexture(imageNamed: "vel4"))
         
-          speedometer = SKSpriteNode(texture: SKTexture(imageNamed: "vel4"))
-         speedometer.addChild(speedometer)
         
+                //speedometer.position = CGPointMake(280, 200)
+        
+        
+                //speedometer.addChild(speedometer)
+        
+           moveSpeedometerToRight()
         
         if valResultGasOrEtn >= 70.0 {
             
@@ -63,27 +67,33 @@ class GasCalculatorModel: NSObject{
             
             
         }else{
+         
             return "Abasteça com Etanol"
         }
+    }
+    
+    
+    
+    
+    //animar velocimetro para direita
+    func moveSpeedometerToRight()
+    {
+        
+        let speedometerRight = SKAction.animateWithTextures([
+            SKTexture(imageNamed: "vel5"),
+            SKTexture(imageNamed: "vel6"),
+            SKTexture(imageNamed: "vel7"),
+            
+            ], timePerFrame: 0.30)
+        
+        //inicializar movimento
+        let run = SKAction.repeatAction(speedometerRight, count: 3)
+        //speedometer.runAction(run, withKey: "running")
+        
     }
     
     
 }
 
 
-//animar velocimetro para direita
-func moveSpeedometerToRight()
-{
-    
-    let speedometerRight = SKAction.animateWithTextures([
-        SKTexture(imageNamed: "vel5"),
-        SKTexture(imageNamed: "vel6"),
-        SKTexture(imageNamed: "vel7"),
-        
-        ], timePerFrame: 0.06)
-    
-    //inicializar movimento
-    let run = SKAction.repeatAction(speedometerRight, count: 3)
-    // .runAction(run, withKey: "running")
-    
-}
+

@@ -7,32 +7,35 @@
 //
 
 import UIKit
+import SpriteKit
 import AVFoundation
 
 
-
-class GasViewController: UIViewController,UITextFieldDelegate {
+class GasViewController: UIViewController, UITextFieldDelegate
+{
     
     @IBOutlet var textGasValue : UITextField!
     @IBOutlet var textGnvOrEtnValue: UITextField!
+    @IBOutlet var textResult: UITextField!
     
-    @IBOutlet weak var textResult: UITextView!
-    
-            //let valResult = GasCalculatorModel(valGas: 0.00 , valEnt: 0.00)
+    var valSpeedometer: SKSpriteNode!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //parra esconder a barra de busca
-       // let tap = UITapGestureRecognizer(target: self, action:"dismissKeyboard")
-      //  view.addGestureRecognizer(tap)
-
-           // NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification)
         textGasValue.delegate = self
         textGnvOrEtnValue.delegate = self
+        textResult.delegate = self
+        
+        
+        
+
+
+        
+ 
         
         UIApplication.sharedApplication().sendAction("resignFirstResponder", to:nil, from:nil, forEvent:nil)
-textGasValue.becomeFirstResponder()
+        textGasValue.becomeFirstResponder()
         
         
         //refreshValues()
@@ -48,36 +51,6 @@ textGasValue.becomeFirstResponder()
     
 
     
-    func refreshValues(){
-        
-        
-        
-       
-    
-//    textGasValue.text = String(format: "%0.3f", textGasValue.text)
-//       textGnvOrEtnValue.text = String(format: "%0.3f", textGnvOrEtnValue.text )
-//       textResult.text = ""
-        
-
-    }
-    
-    
-    
-    
-
-    
-//    func keyboardWillShow(notification: NSNotification) {
-//        let frame = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue
-//        // do stuff with the frame...
-//    }
-    
-//    var currencyFormatter: NSNumberFormatter {
-//        let formatter = NSNumberFormatter()
-//        formatter.numberStyle = .CurrencyStyle
-//        return formatter
-//    }
-
-    
     
     @IBAction func buttonCalculate(sender: AnyObject) {
         
@@ -89,6 +62,8 @@ textGasValue.becomeFirstResponder()
       var valResult = GasCalculatorModel(valGas: valGasDouble, valEnt: valGnvOrEtnDouble)
         
         textResult.text = valResult.returnResultGasOrEtn()
+        
+        
         
         
         //fechar teclado virtual
@@ -148,20 +123,7 @@ textGasValue.becomeFirstResponder()
 
     
     func textFieldShouldReturn(userText: UITextField) -> Bool {
-        
         userText.resignFirstResponder()
         return true;
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-
 }
