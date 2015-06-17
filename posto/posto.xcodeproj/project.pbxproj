@@ -15,10 +15,6 @@
 		552A15BB1B25D9EA0092A01A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 552A15B91B25D9EA0092A01A /* LaunchScreen.xib */; };
 		552A15C71B25D9EA0092A01A /* postoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552A15C61B25D9EA0092A01A /* postoTests.swift */; };
 		552F61B91B2EF9F900F2217B /* MyCarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552F61B81B2EF9F900F2217B /* MyCarData.swift */; };
-		55F58F921B25F8DB00DC2CC3 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F58F911B25F8DB00DC2CC3 /* MenuViewController.swift */; };
-		55F58F951B260B4C00DC2CC3 /* CarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F58F941B260B4C00DC2CC3 /* CarViewController.swift */; };
-		55F58F971B260B7900DC2CC3 /* GasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F58F961B260B7900DC2CC3 /* GasViewController.swift */; };
-		55F58F991B260C0B00DC2CC3 /* MaintenanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F58F981B260C0B00DC2CC3 /* MaintenanceViewController.swift */; };
 		6313635E1B30F21E00BD009E /* CarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6313635A1B30F21E00BD009E /* CarViewController.swift */; };
 		6313635F1B30F21E00BD009E /* GasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6313635B1B30F21E00BD009E /* GasViewController.swift */; };
 		631363601B30F21E00BD009E /* MaintenanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6313635C1B30F21E00BD009E /* MaintenanceViewController.swift */; };
@@ -49,10 +45,6 @@
 		552A15C51B25D9EA0092A01A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		552A15C61B25D9EA0092A01A /* postoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postoTests.swift; sourceTree = "<group>"; };
 		552F61B81B2EF9F900F2217B /* MyCarData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCarData.swift; sourceTree = "<group>"; };
-		55F58F911B25F8DB00DC2CC3 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = Controllers/MenuViewController.swift; sourceTree = "<group>"; };
-		55F58F941B260B4C00DC2CC3 /* CarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarViewController.swift; path = Controllers/CarViewController.swift; sourceTree = "<group>"; };
-		55F58F961B260B7900DC2CC3 /* GasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GasViewController.swift; path = Controllers/GasViewController.swift; sourceTree = "<group>"; };
-		55F58F981B260C0B00DC2CC3 /* MaintenanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MaintenanceViewController.swift; path = Controllers/MaintenanceViewController.swift; sourceTree = "<group>"; };
 		6313635A1B30F21E00BD009E /* CarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarViewController.swift; sourceTree = "<group>"; };
 		6313635B1B30F21E00BD009E /* GasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GasViewController.swift; sourceTree = "<group>"; };
 		6313635C1B30F21E00BD009E /* MaintenanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaintenanceViewController.swift; sourceTree = "<group>"; };
@@ -101,7 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				633FE4701B27AE990094F9CF /* Models */,
-				55F58F931B25F8E600DC2CC3 /* Controllers */,
 				552A15AD1B25D9EA0092A01A /* AppDelegate.swift */,
 				552A15B21B25D9EA0092A01A /* ViewController.swift */,
 				552A15B41B25D9EA0092A01A /* Main.storyboard */,
@@ -136,17 +127,6 @@
 				552A15C51B25D9EA0092A01A /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		55F58F931B25F8E600DC2CC3 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				55F58F981B260C0B00DC2CC3 /* MaintenanceViewController.swift */,
-				55F58F911B25F8DB00DC2CC3 /* MenuViewController.swift */,
-				55F58F941B260B4C00DC2CC3 /* CarViewController.swift */,
-				55F58F961B260B7900DC2CC3 /* GasViewController.swift */,
-			);
-			name = Controllers;
 			sourceTree = "<group>";
 		};
 		631363591B30F21E00BD009E /* Controllers */ = {
@@ -271,10 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6313635F1B30F21E00BD009E /* GasViewController.swift in Sources */,
-				55F58F971B260B7900DC2CC3 /* GasViewController.swift in Sources */,
 				633FE4721B27AE990094F9CF /* GasCalculatorModel.swift in Sources */,
-				55F58F991B260C0B00DC2CC3 /* MaintenanceViewController.swift in Sources */,
-				55F58F951B260B4C00DC2CC3 /* CarViewController.swift in Sources */,
 				552F61B91B2EF9F900F2217B /* MyCarData.swift in Sources */,
 				6313635E1B30F21E00BD009E /* CarViewController.swift in Sources */,
 				631363611B30F21E00BD009E /* MenuViewController.swift in Sources */,
@@ -282,7 +259,6 @@
 				631363601B30F21E00BD009E /* MaintenanceViewController.swift in Sources */,
 				552A15AE1B25D9EA0092A01A /* AppDelegate.swift in Sources */,
 				552A15B11B25D9EA0092A01A /* posto.xcdatamodeld in Sources */,
-				55F58F921B25F8DB00DC2CC3 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
