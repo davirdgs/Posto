@@ -19,6 +19,8 @@
 		6313635F1B30F21E00BD009E /* GasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6313635B1B30F21E00BD009E /* GasViewController.swift */; };
 		631363601B30F21E00BD009E /* MaintenanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6313635C1B30F21E00BD009E /* MaintenanceViewController.swift */; };
 		631363611B30F21E00BD009E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6313635D1B30F21E00BD009E /* MenuViewController.swift */; };
+		631363631B319B5E00BD009E /* speedometer.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 631363621B319B5E00BD009E /* speedometer.atlas */; };
+		631363691B31C41D00BD009E /* SpeedometerAnimationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631363681B31C41D00BD009E /* SpeedometerAnimationModel.swift */; };
 		633FE4721B27AE990094F9CF /* GasCalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633FE4711B27AE990094F9CF /* GasCalculatorModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +51,8 @@
 		6313635B1B30F21E00BD009E /* GasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GasViewController.swift; sourceTree = "<group>"; };
 		6313635C1B30F21E00BD009E /* MaintenanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaintenanceViewController.swift; sourceTree = "<group>"; };
 		6313635D1B30F21E00BD009E /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		631363621B319B5E00BD009E /* speedometer.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = speedometer.atlas; path = ../speedometer.atlas; sourceTree = "<group>"; };
+		631363681B31C41D00BD009E /* SpeedometerAnimationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedometerAnimationModel.swift; sourceTree = "<group>"; };
 		633FE4711B27AE990094F9CF /* GasCalculatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GasCalculatorModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +101,7 @@
 				552A15B21B25D9EA0092A01A /* ViewController.swift */,
 				552A15B41B25D9EA0092A01A /* Main.storyboard */,
 				552A15B71B25D9EA0092A01A /* Images.xcassets */,
+				631363621B319B5E00BD009E /* speedometer.atlas */,
 				552A15B91B25D9EA0092A01A /* LaunchScreen.xib */,
 				552A15AF1B25D9EA0092A01A /* posto.xcdatamodeld */,
 				552A15AB1B25D9EA0092A01A /* Supporting Files */,
@@ -144,6 +149,7 @@
 		633FE4701B27AE990094F9CF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				631363681B31C41D00BD009E /* SpeedometerAnimationModel.swift */,
 				633FE4711B27AE990094F9CF /* GasCalculatorModel.swift */,
 				552F61B81B2EF9F900F2217B /* MyCarData.swift */,
 			);
@@ -231,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				552A15B61B25D9EA0092A01A /* Main.storyboard in Resources */,
+				631363631B319B5E00BD009E /* speedometer.atlas in Resources */,
 				552A15BB1B25D9EA0092A01A /* LaunchScreen.xib in Resources */,
 				552A15B81B25D9EA0092A01A /* Images.xcassets in Resources */,
 			);
@@ -258,6 +265,7 @@
 				552A15B31B25D9EA0092A01A /* ViewController.swift in Sources */,
 				631363601B30F21E00BD009E /* MaintenanceViewController.swift in Sources */,
 				552A15AE1B25D9EA0092A01A /* AppDelegate.swift in Sources */,
+				631363691B31C41D00BD009E /* SpeedometerAnimationModel.swift in Sources */,
 				552A15B11B25D9EA0092A01A /* posto.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

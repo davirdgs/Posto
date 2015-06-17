@@ -15,8 +15,9 @@ class GasCalculatorModel: NSObject{
     var valGas: Float
     var valEtn: Float
     
-    var speedometer: SKSpriteNode!
   
+    
+    
     
     //retorna porcentagem da divisão Etn por Gas
     var valResultGasOrEtn: Float{
@@ -37,35 +38,24 @@ class GasCalculatorModel: NSObject{
         
         self.valGas = valGas
         self.valEtn = valEnt
+        
+        
+
+        
     }
     
     
     func returnResultGasOrEtn() -> String{
         
+        var teste: SpeedometerAnimationModel = SpeedometerAnimationModel()
+       
+         teste.moveSpeedometerToRight()
+        
 
-                //speedometer = SKSpriteNode(texture: SKTexture(imageNamed: "vel4"))
-        
-        
-                //speedometer.position = CGPointMake(280, 200)
-        
-        
-                //speedometer.addChild(speedometer)
-        
-           moveSpeedometerToRight()
-        
         if valResultGasOrEtn >= 70.0 {
             
             
-            
-
-            
-
-             moveSpeedometerToRight()
-            
             return "Abasteça com Gasolina"
-
-            
-            
         }else{
          
             return "Abasteça com Etanol"
@@ -75,21 +65,7 @@ class GasCalculatorModel: NSObject{
     
     
     
-    //animar velocimetro para direita
-    func moveSpeedometerToRight()
-    {
-        
-        let speedometerRight = SKAction.animateWithTextures([
-            SKTexture(imageNamed: "vel5"),
-            SKTexture(imageNamed: "vel6"),
-            SKTexture(imageNamed: "vel7")
-            ], timePerFrame: 0.30)
-        
-        //inicializar movimento
-        let run = SKAction.repeatAction(speedometerRight, count: 3)
-        speedometer.runAction(run)
-        
-    }
+
     
     
 }

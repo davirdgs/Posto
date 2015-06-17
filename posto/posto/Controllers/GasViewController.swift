@@ -10,6 +10,8 @@ import UIKit
 import AVFoundation
 import SpriteKit
 
+
+
 class GasViewController: UIViewController, UITextFieldDelegate
 {
     
@@ -17,8 +19,7 @@ class GasViewController: UIViewController, UITextFieldDelegate
     @IBOutlet var textGnvOrEtnValue: UITextField!
     @IBOutlet var textResult: UITextField!
     
-    
-    var valSpeedometer: SKSpriteNode!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,9 @@ class GasViewController: UIViewController, UITextFieldDelegate
         
         UIApplication.sharedApplication().sendAction("resignFirstResponder", to:nil, from:nil, forEvent:nil)
         textGasValue.becomeFirstResponder()
+        
+        
+
         
         
         //refreshValues()
@@ -54,6 +58,11 @@ class GasViewController: UIViewController, UITextFieldDelegate
       var valResult = GasCalculatorModel(valGas: valGasDouble, valEnt: valGnvOrEtnDouble)
         
         textResult.text = valResult.returnResultGasOrEtn()
+        
+        
+
+        
+     
         
         
         
