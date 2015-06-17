@@ -7,9 +7,8 @@
 //
 
 import UIKit
-import SpriteKit
 import AVFoundation
-
+import SpriteKit
 
 class GasViewController: UIViewController, UITextFieldDelegate
 {
@@ -18,21 +17,14 @@ class GasViewController: UIViewController, UITextFieldDelegate
     @IBOutlet var textGnvOrEtnValue: UITextField!
     @IBOutlet var textResult: UITextField!
     
+    
     var valSpeedometer: SKSpriteNode!
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         textGasValue.delegate = self
         textGnvOrEtnValue.delegate = self
-        textResult.delegate = self
-        
-        
-        
-
-
-        
- 
+        //textResult.delegate = self
         
         UIApplication.sharedApplication().sendAction("resignFirstResponder", to:nil, from:nil, forEvent:nil)
         textGasValue.becomeFirstResponder()
@@ -86,9 +78,6 @@ class GasViewController: UIViewController, UITextFieldDelegate
                 if newLength == 2 {
                             textField.text.extend(".")
                 }
-                
-                
-                
                 let disallowedCharacterSet = NSCharacterSet(charactersInString: "0123456789").invertedSet
                 let replacementStringIsLegal = string.rangeOfCharacterFromSet(disallowedCharacterSet) == nil
                 
@@ -100,28 +89,12 @@ class GasViewController: UIViewController, UITextFieldDelegate
                 result = replacementStringIsLegal &&
                     resultingStringLengthIsLegal &&
                 resultingTextIsNumeric
-                
-                
-
             }
         }
         return result
     }
 
-    
 
-
-    
-    
-    //abaixar teclado virtual
-//    func dismissKeyboard(){
-//            self.textGasValue.resignFirstResponder()
-//            self.textGnvOrEtnValue.resignFirstResponder()
-//        
-//    }
-    
-
-    
     func textFieldShouldReturn(userText: UITextField) -> Bool {
         userText.resignFirstResponder()
         return true;
