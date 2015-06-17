@@ -32,7 +32,6 @@ import UIKit
         defauts.setObject(km, forKey: "km_defaults")
         defauts.setObject(oil, forKey: "oil_defaults")
         defauts.setObject(inspection, forKey: "inspection_defaults")
-        //self.defauts.setObject("km", forKey: "km_defaults")
         return true
     }
     

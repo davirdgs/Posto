@@ -41,13 +41,20 @@ class CarViewController: UIViewController, UIPickerViewDataSource, UIPickerViewD
         let oil: NSNumber
         let inspection: NSNumber
         
-        km = formatter.numberFromString(self.kmTextField.text)!
-        oil = formatter.numberFromString(self.oilTextField.text)!
-        inspection = formatter.numberFromString(self.reviewTextField.text)!
+        if(!self.kmTextField.text.isEmpty) {
+            km = formatter.numberFromString(self.kmTextField.text)!
+            MyCarData.changeKmValue(km)
+        }
         
-        MyCarData.changeInspection(inspection)
-        MyCarData.changeKmValue(km)
-        MyCarData.changeOilValue(oil)
+        if(!self.oilTextField.text.isEmpty) {
+            oil = formatter.numberFromString(self.oilTextField.text)!
+            MyCarData.changeOilValue(oil)
+        }
+        
+        if(!self.reviewTextField.text.isEmpty) {
+            inspection = formatter.numberFromString(self.reviewTextField.text)!
+            MyCarData.changeInspection(inspection)
+        }
         
         MyCarData.saveValues()
         

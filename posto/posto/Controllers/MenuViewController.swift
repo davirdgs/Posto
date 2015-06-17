@@ -14,6 +14,7 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        MyCarData.saveValues()
         // Do any additional setup after loading the view.
     }
     
