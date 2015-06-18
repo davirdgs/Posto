@@ -42,7 +42,7 @@ class MaintenanceViewController: UIViewController {
             return
         }
         
-        next = kmNumber.intValue - oilNumber.intValue
+        next = 10000 - (kmNumber.intValue - oilNumber.intValue)
         
         
         
