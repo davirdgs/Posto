@@ -7,13 +7,13 @@
 //
 
 import SpriteKit
-
+import AVFoundation
 
 
 class SpeedometerAnimationModel: SKScene {
     var speedometerSprite: SKSpriteNode!
     var speedometerMoveRight: SKAction!
-    var moving: SKNode!
+
 
 
     
@@ -21,14 +21,13 @@ class SpeedometerAnimationModel: SKScene {
         
         
         //controle de gravidade inicial
-        self.physicsWorld.gravity = CGVectorMake(0.0, +1.0)
+        self.physicsWorld.gravity = CGVectorMake(0.0, 0.0)
         
-        moving = SKNode()
-        self.addChild(moving)
+        backgroundColor = SKColor.whiteColor()
         
         speedometerSprite = SKSpriteNode(texture: SKTexture(imageNamed: "vel4"))
-        speedometerSprite.xScale = 0.7
-        speedometerSprite.yScale = 0.8
+        speedometerSprite.xScale = 0.2
+        speedometerSprite.yScale = 0.2
         speedometerSprite.position = CGPointMake(frame.width / 2.5, frame.height / 2.5)
         self.addChild(speedometerSprite)
 

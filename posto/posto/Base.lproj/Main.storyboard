@@ -333,7 +333,7 @@
                         <viewControllerLayoutGuide type="top" id="cz9-n9-jZ0"/>
                         <viewControllerLayoutGuide type="bottom" id="HQM-Cs-Rjd"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="bAv-SV-ccv">
+                    <view key="view" contentMode="scaleToFill" id="bAv-SV-ccv" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -444,7 +444,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="233" y="345" width="142" height="139"/>
+                                    <rect key="frame" x="116" y="282" width="142" height="139"/>
                                 </variation>
                                 <connections>
                                     <action selector="buttonCalculate:" destination="frC-hj-kNo" eventType="touchUpInside" id="GGB-fb-qjw"/>

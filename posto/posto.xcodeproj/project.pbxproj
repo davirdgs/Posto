@@ -101,6 +101,7 @@
 				633FE4701B27AE990094F9CF /* Models */,
 				552A15AD1B25D9EA0092A01A /* AppDelegate.swift */,
 				552A15B21B25D9EA0092A01A /* ViewController.swift */,
+				631363621B319B5E00BD009E /* speedometer.atlas */,
 				552A15B41B25D9EA0092A01A /* Main.storyboard */,
 				552A15B71B25D9EA0092A01A /* Images.xcassets */,
 				631363781B3239FF00BD009E /* SpeedometerAnimationModel.sks */,
@@ -114,7 +115,6 @@
 		552A15AB1B25D9EA0092A01A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				631363621B319B5E00BD009E /* speedometer.atlas */,
 				552A15AC1B25D9EA0092A01A /* Info.plist */,
 			);
 			name = "Supporting Files";

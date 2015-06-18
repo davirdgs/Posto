@@ -40,6 +40,21 @@ class GasViewController: UIViewController, UITextFieldDelegate
         super.viewDidLoad()
         
         
+        let scene = SpeedometerAnimationModel(size: CGSize(width: 200, height: 100))
+            
+            // Configure the view.
+            let skView = self.view as! SKView
+            
+           
+            /* Sprite Kit applies additional optimizations to improve rendering performance */
+            skView.ignoresSiblingOrder = true
+            
+            /* Set the scale mode to scale to fit the window */
+            scene.size = skView.bounds.size
+            scene.scaleMode = .AspectFill
+            
+            skView.presentScene(scene)
+        
 
         
         textGasValue.delegate = self
@@ -50,25 +65,6 @@ class GasViewController: UIViewController, UITextFieldDelegate
         textGasValue.becomeFirstResponder()
         
         
-        
-        // criar primeira cena do jogo, da classe gamescene
-        let scene = SpeedometerAnimationModel(size: CGSize(width: 700, height: 840))
-        
-        // configurar a view
-        let skView = self.view as! SKView
-        
-        // vizualisar fps e node para debug
-        skView.showsFPS = true
-        skView.showsNodeCount = true
-        
-        // otimizacoes de desempenho de renderizacao feito por spritekit
-        skView.ignoresSiblingOrder = true
-        
-        // setar escala da janela
-        scene.scaleMode = .AspectFill
-        
-        //mostrar cena
-        skView.presentScene(scene)
 
         
         
@@ -76,11 +72,11 @@ class GasViewController: UIViewController, UITextFieldDelegate
     }
 
     
-    override func shouldAutorotate() -> Bool {
+     override func shouldAutorotate() -> Bool {
         return true
     }
     
-    override func supportedInterfaceOrientations() -> Int {
+     override func supportedInterfaceOrientations() -> Int {
         if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
             return Int(UIInterfaceOrientationMask.AllButUpsideDown.rawValue)
         } else {
@@ -88,18 +84,18 @@ class GasViewController: UIViewController, UITextFieldDelegate
         }
     }
     
-    override func didReceiveMemoryWarning() {
+     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.
     }
     
-    override func prefersStatusBarHidden() -> Bool {
+     override func prefersStatusBarHidden() -> Bool {
         return true
     }
 
     
     
-    @IBAction func buttonCalculate(sender: NSObject) {
+     func buttonCalculate(sender: NSObject) {
         
         //fechar teclado virtual
         self.view.endEditing(true)
