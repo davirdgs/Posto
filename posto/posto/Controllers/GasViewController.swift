@@ -10,6 +10,21 @@ import UIKit
 import AVFoundation
 import SpriteKit
 
+extension SKNode {
+    class func unarchiveFromFile(file : String) -> SKNode? {
+        if let path = NSBundle.mainBundle().pathForResource(file, ofType: "sks") {
+            var sceneData = NSData(contentsOfFile: path, options: .DataReadingMappedIfSafe, error: nil)!
+            var archiver = NSKeyedUnarchiver(forReadingWithData: sceneData)
+            
+            archiver.setClass(self.classForKeyedUnarchiver(), forClassName: "SKScene")
+            let scene = archiver.decodeObjectForKey(NSKeyedArchiveRootObjectKey) as! SpeedometerAnimationModel
+            archiver.finishDecoding()
+            return scene
+        } else {
+            return nil
+        }
+    }
+}
 
 
 class GasViewController: UIViewController, UITextFieldDelegate
@@ -19,10 +34,14 @@ class GasViewController: UIViewController, UITextFieldDelegate
     @IBOutlet var textGnvOrEtnValue: UITextField!
     @IBOutlet var textResult: UITextField!
     
-
+// var teste: SpeedometerAnimationModel = SpeedometerAnimationModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+
+        
         textGasValue.delegate = self
         textGnvOrEtnValue.delegate = self
         //textResult.delegate = self
@@ -31,6 +50,25 @@ class GasViewController: UIViewController, UITextFieldDelegate
         textGasValue.becomeFirstResponder()
         
         
+        
+        // criar primeira cena do jogo, da classe gamescene
+        let scene = SpeedometerAnimationModel(size: CGSize(width: 700, height: 840))
+        
+        // configurar a view
+        let skView = self.view as! SKView
+        
+        // vizualisar fps e node para debug
+        skView.showsFPS = true
+        skView.showsNodeCount = true
+        
+        // otimizacoes de desempenho de renderizacao feito por spritekit
+        skView.ignoresSiblingOrder = true
+        
+        // setar escala da janela
+        scene.scaleMode = .AspectFill
+        
+        //mostrar cena
+        skView.presentScene(scene)
 
         
         
@@ -38,22 +76,39 @@ class GasViewController: UIViewController, UITextFieldDelegate
     }
 
     
+    override func shouldAutorotate() -> Bool {
+        return true
+    }
     
+    override func supportedInterfaceOrientations() -> Int {
+        if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
+            return Int(UIInterfaceOrientationMask.AllButUpsideDown.rawValue)
+        } else {
+            return Int(UIInterfaceOrientationMask.All.rawValue)
+        }
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        // Release any cached data, images, etc that aren't in use.
     }
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 
     
     
-    @IBAction func buttonCalculate(sender: AnyObject) {
+    @IBAction func buttonCalculate(sender: NSObject) {
+        
+        //fechar teclado virtual
+        self.view.endEditing(true)
         
         var valGasDouble = Float((textGasValue.text as NSString).floatValue)
         var valGnvOrEtnDouble = Float((textGnvOrEtnValue.text as NSString).floatValue)
         
-        
+       
+
         
       var valResult = GasCalculatorModel(valGas: valGasDouble, valEnt: valGnvOrEtnDouble)
         
@@ -62,13 +117,12 @@ class GasViewController: UIViewController, UITextFieldDelegate
         
 
         
-     
+    // teste.createSpeedometer()
         
         
         
         
-        //fechar teclado virtual
-        self.view.endEditing(true)
+        
         
     }
     

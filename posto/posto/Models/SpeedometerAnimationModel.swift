@@ -8,36 +8,76 @@
 
 import SpriteKit
 
+
+
 class SpeedometerAnimationModel: SKScene {
-    
-    let textureAtlas = SKTextureAtlas(named:"speedometer.atlas")
+    var speedometerSprite: SKSpriteNode!
+    var speedometerMoveRight: SKAction!
+    var moving: SKNode!
+
 
     
     override func didMoveToView(view: SKView) {
-        view.scene!.anchorPoint = CGPoint(x: 0.5,y: 0.5)
         
-        let sprite=SKSpriteNode(texture:textureAtlas.textureNamed("vel4.png"))
-        sprite.xScale = 8
-        sprite.yScale = 8
-        self.addChild(sprite)
+        
+        //controle de gravidade inicial
+        self.physicsWorld.gravity = CGVectorMake(0.0, +1.0)
+        
+        moving = SKNode()
+        self.addChild(moving)
+        
+        speedometerSprite = SKSpriteNode(texture: SKTexture(imageNamed: "vel4"))
+        speedometerSprite.xScale = 0.7
+        speedometerSprite.yScale = 0.8
+        speedometerSprite.position = CGPointMake(frame.width / 2.5, frame.height / 2.5)
+        self.addChild(speedometerSprite)
+
+        
+        self.createSpeedometer()
+       
     }
     
     
-    
-    //animar velocimetro para direita
-    func moveSpeedometerToRight()
+    func createSpeedometer()
     {
         
-        let speedometerRight = SKAction.animateWithTextures([
-            textureAtlas.textureNamed("vel5"),
-            textureAtlas.textureNamed("vel6"),
-            textureAtlas.textureNamed("vel7")
-            ], timePerFrame: 0.7)
+        //let speedometerAtlas = SKTextureAtlas(named: "speedometer")
+        let moveSpeedometer = SKAction.animateWithTextures([
+            SKTexture(imageNamed: "vel5"),
+            SKTexture(imageNamed: "vel6"),
+            SKTexture(imageNamed: "vel7"),
+            ], timePerFrame: 0.5)
         
-        //inicializar movimento
-        let run = SKAction.repeatAction(speedometerRight, count: 3)
-        self.runAction(run, withKey: "running")
+        let run = SKAction.repeatActionForever(moveSpeedometer)
+        speedometerSprite.runAction(run, withKey: "running")
+       // self.speedometerSprite = SKAction.animateWithTextures(speedometerAtlas, timePerFrame: 3)
         
+             //   self.runAction(speedometerAtlas, withKey: "running")
     }
+    
+    
+    
+//    //animar velocimetro para direita
+//    func moveSpeedometerToRight()
+//    {
+//        
+//        
+//        speedometerSprite=SKSpriteNode(texture: SKTexture(imageNamed: "vel5"))
+//        speedometerSprite.xScale = 5
+//        speedometerSprite.yScale = 5
+//        speedometerSprite.position = CGPointMake(frame.width / 2.5, frame.height / 2.75)
+//        self.addChild(speedometerSprite)
+//        
+//        speedometerMoveRight = SKAction.animateWithTextures([
+//            textureAtlas.textureNamed("vel5"),
+//            textureAtlas.textureNamed("vel6"),
+//            textureAtlas.textureNamed("vel7")
+//            ], timePerFrame: 0.7)
+//        
+//        //inicializar movimento
+//        let run = SKAction.repeatAction(speedometerMoveRight, count: 100)
+//        self.runAction(run, withKey: "running")
+//        
+//    }
     
 }

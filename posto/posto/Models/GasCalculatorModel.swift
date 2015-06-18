@@ -10,12 +10,15 @@ import UIKit
 import SpriteKit
 import Foundation
 
+
+
+
 class GasCalculatorModel: NSObject{
     var formatter = NSNumberFormatter()
     var valGas: Float
     var valEtn: Float
     
-  
+
     
     
     
@@ -47,9 +50,12 @@ class GasCalculatorModel: NSObject{
     
     func returnResultGasOrEtn() -> String{
         
-        var teste: SpeedometerAnimationModel = SpeedometerAnimationModel()
        
-         teste.moveSpeedometerToRight()
+        
+        
+        
+        
+        
         
 
         if valResultGasOrEtn >= 70.0 {

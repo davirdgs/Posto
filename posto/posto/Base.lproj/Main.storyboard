@@ -239,6 +239,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6u4-dl-Xa4">
                                 <rect key="frame" x="25" y="427" width="324" height="111"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tools" translatesAutoresizingMaskIntoConstraints="NO" id="BQy-PM-GSA">
+                                        <rect key="frame" x="0.0" y="0.0" width="124" height="111"/>
+                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nLt-gS-Qg2">
                                         <rect key="frame" x="0.0" y="0.0" width="324" height="111"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -250,9 +253,6 @@
                                             <segue destination="UDI-Px-puz" kind="show" id="t63-VF-dmn"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tools" translatesAutoresizingMaskIntoConstraints="NO" id="BQy-PM-GSA">
-                                        <rect key="frame" x="0.0" y="0.0" width="124" height="111"/>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -328,7 +328,7 @@
         <!--Gas View Controller-->
         <scene sceneID="tJJ-9g-vna">
             <objects>
-                <viewController id="frC-hj-kNo" customClass="GasViewController" customModule="posto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="frC-hj-kNo" customClass="GasViewController" customModule="posto" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cz9-n9-jZ0"/>
                         <viewControllerLayoutGuide type="bottom" id="HQM-Cs-Rjd"/>
@@ -438,16 +438,16 @@
                                     <rect key="frame" x="61" y="243" width="129" height="21"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oy7-zG-Ymb">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CbM-Ib-fQO">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" backgroundImage="vel4.png">
+                                <state key="normal" backgroundImage="vel4">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="117" y="272" width="144" height="133"/>
+                                    <rect key="frame" x="233" y="345" width="142" height="139"/>
                                 </variation>
                                 <connections>
-                                    <action selector="buttonCalculate:" destination="frC-hj-kNo" eventType="touchUpInside" id="JTo-gX-kmh"/>
+                                    <action selector="buttonCalculate:" destination="frC-hj-kNo" eventType="touchUpInside" id="GGB-fb-qjw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -455,13 +455,13 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="Ugm-da-TYi"/>
-                                <exclude reference="oy7-zG-Ymb"/>
+                                <exclude reference="CbM-Ib-fQO"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="Ugm-da-TYi"/>
-                                <include reference="oy7-zG-Ymb"/>
+                                <include reference="CbM-Ib-fQO"/>
                             </mask>
                         </variation>
                     </view>
@@ -482,6 +482,6 @@
         <image name="gas_station" width="256" height="256"/>
         <image name="gas_station1" width="512" height="512"/>
         <image name="tools" width="256" height="256"/>
-        <image name="vel4.png" width="500" height="500"/>
+        <image name="vel4" width="500" height="500"/>
     </resources>
 </document>
