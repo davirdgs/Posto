@@ -11,8 +11,11 @@ import UIKit
 class MaintenanceViewController: UIViewController {
 
     
-    @IBOutlet weak var oilLabel: UILabel!
-    @IBOutlet weak var maintenanceLabel: UILabel!
+
+    
+    @IBOutlet weak var oilTextField: UITextView!
+    @IBOutlet weak var maintenanceTextField: UITextView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,14 +38,32 @@ class MaintenanceViewController: UIViewController {
         let oilNumber: NSNumber = MyCarData.returnValue("oil_defaults") as! NSNumber
         let kmNumber: NSNumber = MyCarData.returnValue("km_defaults") as! NSNumber
         
+        //println(oilNumber)
+        //println(kmNumber)
+        //println(MyCarData.returnValue("user_type"))
+        
         var next: Int
+        var ref: Int = 0
+        
+        if(MyCarData.returnValue("user_type") as! Int == 0) {
+            ref = 7000
+        } else if(MyCarData.returnValue("user_type") as! Int == 1) {
+            ref = 15000
+        }
+        
         
         if(oilNumber == 0 || kmNumber == 0) {
-            self.oilLabel.text = "Atualize com a quilometragem da última troca de óleo e a quilometragem atual no menu 'Meu Carro'"
+            self.oilTextField.text = "Atualize com a quilometragem da última troca de óleo e a quilometragem atual no menu 'Meu Carro'"
             return
         }
         
-        next = 10000 - (kmNumber.intValue - oilNumber.intValue)
+        next = ref - (kmNumber.intValue - oilNumber.intValue)
+        if(next < 0) {
+            next = 0 - next
+            self.oilTextField.text = "A última troca de óleo deveria ocorrer há " + next.description + " quilometros"
+        } else {
+            self.oilTextField.text = "Próxima troca de óleo em " + next.description + " quilometros"
+        }
         
         
         
@@ -52,9 +73,27 @@ class MaintenanceViewController: UIViewController {
         let inspectionNumber: NSNumber = MyCarData.returnValue("inspection_defaults") as! NSNumber
         let kmNumber: NSNumber = MyCarData.returnValue("km_defaults") as! NSNumber
         
+        var next: Int
+        var ref: Int = 0
+        
+        if(MyCarData.returnValue("user_type") as! Int == 0) {
+            ref = 10000
+        } else if(MyCarData.returnValue("user_type") as! Int == 1) {
+            ref = 20000
+        }
+        
+        
         if(inspectionNumber == 0 || kmNumber == 0) {
-            self.maintenanceLabel.text = "Atualize com a quilometragem da última revisão e a quilometragem atual no menu 'Meu Carro'"
+            self.maintenanceTextField.text = "Atualize com a quilometragem da última troca de óleo e a quilometragem atual no menu 'Meu Carro'"
             return
+        }
+        
+        next = ref - (kmNumber.intValue - inspectionNumber.intValue)
+        if(next < 0) {
+            next = 0 - next
+            self.maintenanceTextField.text = "A última troca de óleo deveria ocorrer há " + next.description + " quilometros"
+        } else {
+            self.maintenanceTextField.text = "Próxima troca de óleo em " + next.description + " quilometros"
         }
     }
     
