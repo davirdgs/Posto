@@ -10,10 +10,20 @@ import UIKit
 
 class MaintenanceViewController: UIViewController {
 
+    
+    @IBOutlet weak var oilLabel: UILabel!
+    @IBOutlet weak var maintenanceLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.setMaintenance()
+        self.setOilText()
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,7 +31,33 @@ class MaintenanceViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func setOilText() {
+        let oilNumber: NSNumber = MyCarData.returnValue("oil_defaults") as! NSNumber
+        let kmNumber: NSNumber = MyCarData.returnValue("km_defaults") as! NSNumber
+        
+        var next: Int
+        
+        if(oilNumber == 0 || kmNumber == 0) {
+            self.oilLabel.text = "Atualize com a quilometragem da última troca de óleo e a quilometragem atual no menu 'Meu Carro'"
+            return
+        }
+        
+        next = kmNumber.intValue - oilNumber.intValue
+        
+        
+        
+    }
+    
+    func setMaintenance() {
+        let inspectionNumber: NSNumber = MyCarData.returnValue("inspection_defaults") as! NSNumber
+        let kmNumber: NSNumber = MyCarData.returnValue("km_defaults") as! NSNumber
+        
+        if(inspectionNumber == 0 || kmNumber == 0) {
+            self.maintenanceLabel.text = "Atualize com a quilometragem da última revisão e a quilometragem atual no menu 'Meu Carro'"
+            return
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

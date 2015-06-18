@@ -15,6 +15,7 @@
 		552A15BB1B25D9EA0092A01A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 552A15B91B25D9EA0092A01A /* LaunchScreen.xib */; };
 		552A15C71B25D9EA0092A01A /* postoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552A15C61B25D9EA0092A01A /* postoTests.swift */; };
 		552F61B91B2EF9F900F2217B /* MyCarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552F61B81B2EF9F900F2217B /* MyCarData.swift */; };
+		559136931B31B1F300A56C17 /* Maintenance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559136921B31B1F300A56C17 /* Maintenance.swift */; };
 		6313635E1B30F21E00BD009E /* CarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6313635A1B30F21E00BD009E /* CarViewController.swift */; };
 		6313635F1B30F21E00BD009E /* GasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6313635B1B30F21E00BD009E /* GasViewController.swift */; };
 		631363601B30F21E00BD009E /* MaintenanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6313635C1B30F21E00BD009E /* MaintenanceViewController.swift */; };
@@ -48,6 +49,7 @@
 		552A15C51B25D9EA0092A01A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		552A15C61B25D9EA0092A01A /* postoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postoTests.swift; sourceTree = "<group>"; };
 		552F61B81B2EF9F900F2217B /* MyCarData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCarData.swift; sourceTree = "<group>"; };
+		559136921B31B1F300A56C17 /* Maintenance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Maintenance.swift; sourceTree = "<group>"; };
 		6313635A1B30F21E00BD009E /* CarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarViewController.swift; sourceTree = "<group>"; };
 		6313635B1B30F21E00BD009E /* GasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GasViewController.swift; sourceTree = "<group>"; };
 		6313635C1B30F21E00BD009E /* MaintenanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaintenanceViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				631363681B31C41D00BD009E /* SpeedometerAnimationModel.swift */,
 				633FE4711B27AE990094F9CF /* GasCalculatorModel.swift */,
 				552F61B81B2EF9F900F2217B /* MyCarData.swift */,
+				559136921B31B1F300A56C17 /* Maintenance.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				631363611B30F21E00BD009E /* MenuViewController.swift in Sources */,
 				552A15B31B25D9EA0092A01A /* ViewController.swift in Sources */,
 				631363601B30F21E00BD009E /* MaintenanceViewController.swift in Sources */,
+				559136931B31B1F300A56C17 /* Maintenance.swift in Sources */,
 				552A15AE1B25D9EA0092A01A /* AppDelegate.swift in Sources */,
 				631363691B31C41D00BD009E /* SpeedometerAnimationModel.swift in Sources */,
 				552A15B11B25D9EA0092A01A /* posto.xcdatamodeld in Sources */,
