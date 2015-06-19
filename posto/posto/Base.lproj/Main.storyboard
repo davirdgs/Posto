@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -49,7 +50,7 @@
                                 </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo de uso" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2c-GL-FSX">
-                                <rect key="frame" x="141" y="100" width="91" height="21"/>
+                                <rect key="frame" x="141" y="100" width="90.5" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="yjK-M6-hfj"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="58" id="z0W-7Y-p0U"/>
@@ -65,13 +66,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Última troca de óleo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJs-Yq-snN">
-                                <rect key="frame" x="41" y="373" width="155" height="21"/>
+                                <rect key="frame" x="41" y="373" width="155" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Última revisão" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6G-eD-y4c">
-                                <rect key="frame" x="41" y="413" width="109" height="21"/>
+                                <rect key="frame" x="41" y="412" width="109" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -88,7 +89,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Km" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Gr-cJ-PXJ">
-                                <rect key="frame" x="262" y="409" width="97" height="30"/>
+                                <rect key="frame" x="262" y="408" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="PZ1-1E-qOw"/>
                                 </constraints>
@@ -109,6 +110,9 @@
                                     <outlet property="delegate" destination="URe-M8-4P9" id="3Ax-tp-l7f"/>
                                 </connections>
                             </textField>
+                            <imageView userInteractionEnabled="NO" alpha="0.24999999999999967" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MyCar" translatesAutoresizingMaskIntoConstraints="NO" id="c2F-mi-WNl">
+                                <rect key="frame" x="0.0" y="64" width="446" height="603"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -135,6 +139,11 @@
                             <constraint firstItem="fCb-fO-Kh4" firstAttribute="top" secondItem="iOB-wU-EzI" secondAttribute="bottom" id="tVh-mz-1gI"/>
                             <constraint firstItem="9RI-ji-MjR" firstAttribute="top" secondItem="I0J-UT-TWr" secondAttribute="bottom" constant="31" id="umQ-oT-2hJ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ZRC-l8-CQX"/>
+                            </mask>
+                        </variation>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="ecA-MA-u6y" appends="YES" id="sxa-lz-dcL"/>
                         </connections>
@@ -158,7 +167,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1565.25" y="66.5"/>
+            <point key="canvasLocation" x="1564.5" y="66.5"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -304,7 +313,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QNx-c8-Itn">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QNx-c8-Itn">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Manutenção" id="7bs-oo-XaJ">
@@ -316,22 +325,43 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="k7o-vp-QUL">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="k7o-vp-QUL">
                                 <rect key="frame" x="16" y="177" width="343" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="k7o-vp-QUL" secondAttribute="height" multiplier="343:128" id="gZ9-en-Kn3"/>
+                                </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2ZT-ZV-F5K">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2ZT-ZV-F5K">
                                 <rect key="frame" x="16" y="334" width="343" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2ZT-ZV-F5K" secondAttribute="height" multiplier="343:128" id="tOp-2Q-5q4"/>
+                                </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" alpha="0.24999999999999967" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Manutencao" translatesAutoresizingMaskIntoConstraints="NO" id="lkP-HW-byc">
+                                <rect key="frame" x="0.0" y="72" width="382" height="595"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2ZT-ZV-F5K" firstAttribute="leading" secondItem="dBf-jO-fBH" secondAttribute="leadingMargin" id="GKc-ZM-ZP7"/>
+                            <constraint firstItem="k7o-vp-QUL" firstAttribute="leading" secondItem="dBf-jO-fBH" secondAttribute="leadingMargin" id="Lit-5v-Cef"/>
+                            <constraint firstAttribute="trailing" secondItem="QNx-c8-Itn" secondAttribute="trailing" id="OTs-MV-fpy"/>
+                            <constraint firstItem="k7o-vp-QUL" firstAttribute="trailing" secondItem="dBf-jO-fBH" secondAttribute="trailingMargin" id="SKA-zM-j6w"/>
+                            <constraint firstItem="k7o-vp-QUL" firstAttribute="top" secondItem="QNx-c8-Itn" secondAttribute="bottom" constant="105" id="SuK-b7-TfY"/>
+                            <constraint firstItem="2ZT-ZV-F5K" firstAttribute="trailing" secondItem="dBf-jO-fBH" secondAttribute="trailingMargin" id="Ti6-Pb-pFe"/>
+                            <constraint firstItem="dVa-eR-mzG" firstAttribute="top" secondItem="2ZT-ZV-F5K" secondAttribute="bottom" constant="205" id="TqJ-7I-kl6"/>
+                            <constraint firstItem="2ZT-ZV-F5K" firstAttribute="top" secondItem="k7o-vp-QUL" secondAttribute="bottom" constant="29" id="in3-Iu-RyE"/>
+                            <constraint firstItem="QNx-c8-Itn" firstAttribute="leading" secondItem="dBf-jO-fBH" secondAttribute="leading" id="mo6-W9-x9T"/>
+                            <constraint firstItem="QNx-c8-Itn" firstAttribute="top" secondItem="i0n-l6-xka" secondAttribute="bottom" constant="8" id="p0B-FR-OX3"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="maintenanceTextField" destination="2ZT-ZV-F5K" id="jVK-nN-4iR"/>
@@ -497,6 +527,8 @@
     </scenes>
     <resources>
         <image name="Car" width="300" height="251"/>
+        <image name="Manutencao" width="512" height="511"/>
+        <image name="MyCar" width="813" height="710"/>
         <image name="gas_station" width="256" height="256"/>
         <image name="gas_station1" width="512" height="512"/>
         <image name="tools" width="256" height="256"/>
