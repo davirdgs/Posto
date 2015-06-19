@@ -88,7 +88,7 @@ class CarViewController: UIViewController, UIPickerViewDataSource, UIPickerViewD
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        //myLabel.text = pickerData[row]
+        MyCarData.changeUserType(row)
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
