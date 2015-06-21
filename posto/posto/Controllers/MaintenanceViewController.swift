@@ -84,16 +84,16 @@ class MaintenanceViewController: UIViewController {
         
         
         if(inspectionNumber == 0 || kmNumber == 0) {
-            self.maintenanceTextField.text = "Atualize com a quilometragem da última troca de óleo e a quilometragem atual no menu 'Meu Carro'"
+            self.maintenanceTextField.text = "Atualize com a quilometragem da última manutenção e a quilometragem atual no menu 'Meu Carro'"
             return
         }
         
         next = ref - (kmNumber.intValue - inspectionNumber.intValue)
         if(next < 0) {
             next = 0 - next
-            self.maintenanceTextField.text = "A última troca de óleo deveria ocorrer há " + next.description + " quilometros"
+            self.maintenanceTextField.text = "A última manutenção deveria ocorrer há " + next.description + " quilometros"
         } else {
-            self.maintenanceTextField.text = "Próxima troca de óleo em " + next.description + " quilometros"
+            self.maintenanceTextField.text = "Próxima manutenção em " + next.description + " quilometros"
         }
     }
     
