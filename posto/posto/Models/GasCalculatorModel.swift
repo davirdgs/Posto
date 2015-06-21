@@ -13,68 +13,33 @@ import Foundation
 
 
 
-class GasCalculatorModel: NSObject{
-    var formatter = NSNumberFormatter()
-    var valGas: Float
-    var valEtn: Float
-    
+public class GasCalculatorModel: NSObject{
 
+    var formatter = NSNumberFormatter()
+    var valGas: Float = 0.0
+    var valEtn: Float = 0.0
+    var result: Float = 0.0
     
-    
-    
-    //retorna porcentagem da divisão Etn por Gas
-    var valResultGasOrEtn: Float{
-        get{
-            var result = (valGas / valEtn) * 100
-            formatter.numberStyle = NSNumberFormatterStyle.DecimalStyle
-            formatter.stringFromNumber(result)
-            
-            return (result)
-        }
-    }
-    
-    
-    init(valGas: Float, valEnt: Float){
+    //Calcular viabilidade dos combustíveis
+    public func returnResultGasOrEtn(valGas: Float, valEtn: Float) -> Bool{
+        
         formatter.numberStyle = .DecimalStyle
         formatter.stringFromNumber(valGas)
-        formatter.stringFromNumber(valEnt)
+        formatter.stringFromNumber(valEtn)
         
         self.valGas = valGas
-        self.valEtn = valEnt
+        self.valEtn = valEtn
         
         
-
+        result = (self.valGas / self.valEtn) * 100
+        formatter.numberStyle = NSNumberFormatterStyle.DecimalStyle
+        formatter.stringFromNumber(result)
         
-    }
-    
-    
-    func returnResultGasOrEtn() -> String{
-        
-       
-        
-        
-        
-        
-        
-        
-
-        if valResultGasOrEtn >= 70.0 {
-            
-            
-            return "Abasteça com Gasolina"
+        if result >= 70.0 {
+            return false
         }else{
-         
-            return "Abasteça com Etanol"
+            return true
+          
         }
     }
-    
-    
-    
-    
-
-    
-    
 }
-
-
-
