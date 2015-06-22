@@ -397,6 +397,12 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gasresult" translatesAutoresizingMaskIntoConstraints="NO" id="oNr-Ef-X9T">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="406" width="375" height="261"/>
+                                </variation>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gas_station1" translatesAutoresizingMaskIntoConstraints="NO" id="oZP-2V-pgA">
                                 <rect key="frame" x="24" y="116" width="137" height="96"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -414,6 +420,7 @@
                                     <rect key="frame" x="90" y="130" width="71" height="30"/>
                                 </variation>
                                 <connections>
+                                    <action selector="textChanged:forEvent:" destination="frC-hj-kNo" eventType="touchDown" id="4wN-iI-GBu"/>
                                     <outlet property="delegate" destination="frC-hj-kNo" id="3vb-gB-fnh"/>
                                 </connections>
                             </textField>
@@ -433,6 +440,7 @@
                                     <rect key="frame" x="219" y="130" width="67" height="30"/>
                                 </variation>
                                 <connections>
+                                    <action selector="textChanged:forEvent:" destination="frC-hj-kNo" eventType="touchDown" id="FXX-xZ-YR9"/>
                                     <outlet property="delegate" destination="frC-hj-kNo" id="l6e-Ul-9De"/>
                                 </connections>
                             </textField>
@@ -464,18 +472,6 @@
                                     <rect key="frame" x="243" y="180" width="18" height="34"/>
                                 </variation>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Resultado" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ugm-da-TYi">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="61" y="492" width="253" height="128"/>
-                                </variation>
-                                <connections>
-                                    <outlet property="delegate" destination="frC-hj-kNo" id="dIw-gZ-axP"/>
-                                </connections>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ETANOL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10d-gF-dQZ">
                                 <rect key="frame" x="61" y="212" width="100" height="21"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -498,25 +494,49 @@
                                     <action selector="buttonCalculate:" destination="frC-hj-kNo" eventType="touchUpInside" id="GGB-fb-qjw"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CALCULAR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYh-mr-W3H">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="136" y="417" width="102" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y0C-c8-XjJ">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="28"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="572" width="375" height="75"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="Ugm-da-TYi"/>
+                                <exclude reference="oNr-Ef-X9T"/>
                                 <exclude reference="CbM-Ib-fQO"/>
+                                <exclude reference="CYh-mr-W3H"/>
+                                <exclude reference="y0C-c8-XjJ"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="Ugm-da-TYi"/>
+                                <include reference="oNr-Ef-X9T"/>
                                 <include reference="CbM-Ib-fQO"/>
+                                <include reference="CYh-mr-W3H"/>
+                                <include reference="y0C-c8-XjJ"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="btnResult" destination="CbM-Ib-fQO" id="XSB-4O-b5v"/>
+                        <outlet property="imgResult" destination="oNr-Ef-X9T" id="hHW-Y9-rKr"/>
                         <outlet property="textGasValue" destination="Gmk-Bf-k6f" id="gyg-iA-wB3"/>
                         <outlet property="textGnvOrEtnValue" destination="kPA-jp-vMb" id="XeL-NZ-qhX"/>
-                        <outlet property="textResult" destination="Ugm-da-TYi" id="7O9-Q8-tn8"/>
+                        <outlet property="textResult" destination="y0C-c8-XjJ" id="1ed-OE-cBw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zFx-XL-hXW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -531,6 +551,7 @@
         <image name="MyCar" width="813" height="710"/>
         <image name="gas_station" width="256" height="256"/>
         <image name="gas_station1" width="512" height="512"/>
+        <image name="gasresult" width="403" height="279"/>
         <image name="tools" width="256" height="256"/>
         <image name="vel4" width="500" height="500"/>
     </resources>

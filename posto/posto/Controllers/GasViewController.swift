@@ -16,7 +16,10 @@ class GasViewController: UIViewController, UITextFieldDelegate
     var calculator = GasCalculatorModel()
     @IBOutlet var textGasValue : UITextField!
     @IBOutlet var textGnvOrEtnValue: UITextField!
-    @IBOutlet var textResult: UITextField!
+    @IBOutlet var textResult: UILabel!
+    @IBOutlet weak var imgResult: UIImageView!
+    
+    @IBOutlet weak var btnResult: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,6 +92,9 @@ class GasViewController: UIViewController, UITextFieldDelegate
         if  valResult == true {
             
             textResult.text = "Abasteça com ETANOL"
+            
+            imgResult.image = UIImage(named: "etnresult.jpg")
+            
 
             let scene = SpeedometerAnimationLeft(size: CGSize(width: 800, height: 600))
             
@@ -106,6 +112,8 @@ class GasViewController: UIViewController, UITextFieldDelegate
             
         }else{
             textResult.text = "Abasteça com GASOLINA"
+            
+            imgResult.image = UIImage(named: "gasresult.jpg")
             
             let scene = SpeedometerAnimationRight(size: CGSize(width: 800, height: 600))
             
@@ -127,13 +135,30 @@ class GasViewController: UIViewController, UITextFieldDelegate
     
 
     
+    @IBAction func textChanged(sender: UITextField, forEvent event: UIEvent) {
+        btnResult.hidden=false
+        
+        let scene = SpeedometerAnimationCenter(size: CGSize(width: 800, height: 600))
+        
+        // Configure the view.
+        let skView = self.view as! SKView
+        
+        /* Set the scale mode to scale to fit the window */
+        scene.size = skView.bounds.size
+        scene.scaleMode = .AspectFill
+        
+        skView.presentScene(scene)
+    }
+    
+    
+    
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         var result = true
         let prospectiveText = (textField.text as NSString).stringByReplacingCharactersInRange(range, withString: string)
         
         let newLength = count(textField.text.utf16) + count(string.utf16) - range.length
-        
+       
         
         if (textField == textGasValue) || textField == textGnvOrEtnValue {
             if count(string) > 0 {
@@ -159,6 +184,9 @@ class GasViewController: UIViewController, UITextFieldDelegate
 
     func textFieldShouldReturn(userText: UITextField) -> Bool {
         userText.resignFirstResponder()
+        
+        
+        
         return true;
     }
 }
