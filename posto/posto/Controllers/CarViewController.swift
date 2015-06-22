@@ -12,7 +12,7 @@ class CarViewController: UIViewController, UIPickerViewDataSource, UIPickerViewD
 {
     @IBOutlet weak var modelPicker: UIPickerView!
     @IBOutlet weak var modelLabel: UILabel!
-    let pickerData = ["Viagens curtas: menos de 5km em media", "Viagens longas: mais de 5km em media"]
+    let pickerData = ["Viagens curtas: menos de 5km", "Viagens longas: mais de 5km"]
     
     
     
