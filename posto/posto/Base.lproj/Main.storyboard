@@ -400,7 +400,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gasresult" translatesAutoresizingMaskIntoConstraints="NO" id="oNr-Ef-X9T">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="406" width="375" height="261"/>
+                                    <rect key="frame" x="0.0" y="453" width="375" height="214"/>
                                 </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gas_station1" translatesAutoresizingMaskIntoConstraints="NO" id="oZP-2V-pgA">
@@ -494,15 +494,6 @@
                                     <action selector="buttonCalculate:" destination="frC-hj-kNo" eventType="touchUpInside" id="GGB-fb-qjw"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CALCULAR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYh-mr-W3H">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="136" y="417" width="102" height="21"/>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y0C-c8-XjJ">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="28"/>
@@ -518,7 +509,6 @@
                             <mask key="subviews">
                                 <exclude reference="oNr-Ef-X9T"/>
                                 <exclude reference="CbM-Ib-fQO"/>
-                                <exclude reference="CYh-mr-W3H"/>
                                 <exclude reference="y0C-c8-XjJ"/>
                             </mask>
                         </variation>
@@ -526,7 +516,6 @@
                             <mask key="subviews">
                                 <include reference="oNr-Ef-X9T"/>
                                 <include reference="CbM-Ib-fQO"/>
-                                <include reference="CYh-mr-W3H"/>
                                 <include reference="y0C-c8-XjJ"/>
                             </mask>
                         </variation>

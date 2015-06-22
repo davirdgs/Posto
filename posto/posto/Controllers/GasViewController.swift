@@ -138,6 +138,12 @@ class GasViewController: UIViewController, UITextFieldDelegate
     @IBAction func textChanged(sender: UITextField, forEvent event: UIEvent) {
         btnResult.hidden=false
         
+        imgResult.image = UIImage(named: "")
+        
+        textGasValue.placeholder = "0.000"
+        textGnvOrEtnValue.placeholder = "0.000"
+        
+        
         let scene = SpeedometerAnimationCenter(size: CGSize(width: 800, height: 600))
         
         // Configure the view.
