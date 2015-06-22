@@ -316,59 +316,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QNx-c8-Itn">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.24999999999999967" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Manutencao" translatesAutoresizingMaskIntoConstraints="NO" id="lkP-HW-byc">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Atualize com a quilometragem da última troca de óleo e a quilometragem atual no menu 'Meu Carro'" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMQ-Hb-5io">
+                                <rect key="frame" x="19" y="289" width="336" height="69"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mfm-Ha-F2I">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mfm-Ha-F2I" secondAttribute="height" multiplier="375:44" id="J20-VK-rmY"/>
+                                </constraints>
                                 <items>
-                                    <navigationItem title="Manutenção" id="7bs-oo-XaJ">
-                                        <barButtonItem key="leftBarButtonItem" title="Voltar" id="Cs4-sk-K00">
+                                    <navigationItem title="Manutenção" id="NQ6-A9-0xG">
+                                        <barButtonItem key="leftBarButtonItem" title="Voltar" id="jab-c7-ysO">
                                             <connections>
-                                                <segue destination="6Pf-ac-jxu" kind="unwind" unwindAction="returnToMenu:" id="PPf-KV-Lft"/>
+                                                <segue destination="6Pf-ac-jxu" kind="unwind" unwindAction="returnToMenu:" id="kK7-Io-prc"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="k7o-vp-QUL">
-                                <rect key="frame" x="16" y="177" width="343" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="k7o-vp-QUL" secondAttribute="height" multiplier="343:128" id="gZ9-en-Kn3"/>
-                                </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2ZT-ZV-F5K">
-                                <rect key="frame" x="16" y="334" width="343" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="2ZT-ZV-F5K" secondAttribute="height" multiplier="343:128" id="tOp-2Q-5q4"/>
-                                </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <imageView userInteractionEnabled="NO" alpha="0.24999999999999967" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Manutencao" translatesAutoresizingMaskIntoConstraints="NO" id="lkP-HW-byc">
-                                <rect key="frame" x="0.0" y="72" width="382" height="595"/>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Atualize com a quilometragem da última troca de óleo e a quilometragem atual no menu 'Meu Carro'" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eC0-kF-dk6">
+                                <rect key="frame" x="23" y="170" width="336" height="69"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2ZT-ZV-F5K" firstAttribute="leading" secondItem="dBf-jO-fBH" secondAttribute="leadingMargin" id="GKc-ZM-ZP7"/>
-                            <constraint firstItem="k7o-vp-QUL" firstAttribute="leading" secondItem="dBf-jO-fBH" secondAttribute="leadingMargin" id="Lit-5v-Cef"/>
-                            <constraint firstAttribute="trailing" secondItem="QNx-c8-Itn" secondAttribute="trailing" id="OTs-MV-fpy"/>
-                            <constraint firstItem="k7o-vp-QUL" firstAttribute="trailing" secondItem="dBf-jO-fBH" secondAttribute="trailingMargin" id="SKA-zM-j6w"/>
-                            <constraint firstItem="k7o-vp-QUL" firstAttribute="top" secondItem="QNx-c8-Itn" secondAttribute="bottom" constant="105" id="SuK-b7-TfY"/>
-                            <constraint firstItem="2ZT-ZV-F5K" firstAttribute="trailing" secondItem="dBf-jO-fBH" secondAttribute="trailingMargin" id="Ti6-Pb-pFe"/>
-                            <constraint firstItem="dVa-eR-mzG" firstAttribute="top" secondItem="2ZT-ZV-F5K" secondAttribute="bottom" constant="205" id="TqJ-7I-kl6"/>
-                            <constraint firstItem="2ZT-ZV-F5K" firstAttribute="top" secondItem="k7o-vp-QUL" secondAttribute="bottom" constant="29" id="in3-Iu-RyE"/>
-                            <constraint firstItem="QNx-c8-Itn" firstAttribute="leading" secondItem="dBf-jO-fBH" secondAttribute="leading" id="mo6-W9-x9T"/>
-                            <constraint firstItem="QNx-c8-Itn" firstAttribute="top" secondItem="i0n-l6-xka" secondAttribute="bottom" constant="8" id="p0B-FR-OX3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lkP-HW-byc" secondAttribute="trailing" constant="-16" id="3Tb-oB-dO5"/>
+                            <constraint firstItem="TMQ-Hb-5io" firstAttribute="trailing" secondItem="eC0-kF-dk6" secondAttribute="trailing" constant="-4" id="CMq-pk-ryZ"/>
+                            <constraint firstItem="lkP-HW-byc" firstAttribute="top" secondItem="i0n-l6-xka" secondAttribute="bottom" constant="44" id="Er0-fy-rr3"/>
+                            <constraint firstAttribute="centerX" secondItem="eC0-kF-dk6" secondAttribute="centerX" constant="-4" id="Fnj-Fk-Q4C"/>
+                            <constraint firstItem="eC0-kF-dk6" firstAttribute="top" secondItem="i0n-l6-xka" secondAttribute="bottom" constant="150" id="LdZ-qT-h4n"/>
+                            <constraint firstAttribute="trailing" secondItem="mfm-Ha-F2I" secondAttribute="trailing" id="VCv-aW-Ldd"/>
+                            <constraint firstItem="mfm-Ha-F2I" firstAttribute="leading" secondItem="dBf-jO-fBH" secondAttribute="leading" id="Z8B-rw-g3n"/>
+                            <constraint firstItem="mfm-Ha-F2I" firstAttribute="top" secondItem="i0n-l6-xka" secondAttribute="bottom" id="bn1-pY-VJe"/>
+                            <constraint firstItem="dVa-eR-mzG" firstAttribute="top" secondItem="lkP-HW-byc" secondAttribute="bottom" id="e9G-76-RwQ"/>
+                            <constraint firstItem="eC0-kF-dk6" firstAttribute="trailing" secondItem="dBf-jO-fBH" secondAttribute="trailingMargin" id="fLD-qY-oiE"/>
+                            <constraint firstItem="TMQ-Hb-5io" firstAttribute="leading" secondItem="eC0-kF-dk6" secondAttribute="leading" constant="-4" id="pXJ-4n-u2d"/>
+                            <constraint firstItem="eC0-kF-dk6" firstAttribute="leading" secondItem="dBf-jO-fBH" secondAttribute="leadingMargin" constant="7" id="qeo-I0-A7e"/>
+                            <constraint firstItem="dVa-eR-mzG" firstAttribute="top" relation="greaterThanOrEqual" secondItem="TMQ-Hb-5io" secondAttribute="bottom" constant="150" id="vee-iH-vYy"/>
+                            <constraint firstAttribute="centerX" secondItem="TMQ-Hb-5io" secondAttribute="centerX" constant="0.5" id="wCT-Hg-AtD"/>
+                            <constraint firstItem="TMQ-Hb-5io" firstAttribute="top" secondItem="eC0-kF-dk6" secondAttribute="bottom" constant="50" id="wLm-iN-dwC"/>
+                            <constraint firstItem="lkP-HW-byc" firstAttribute="leading" secondItem="dBf-jO-fBH" secondAttribute="leadingMargin" constant="-16" id="ziW-68-d7L"/>
                         </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="maintenanceTextField" destination="2ZT-ZV-F5K" id="jVK-nN-4iR"/>
-                        <outlet property="oilTextField" destination="k7o-vp-QUL" id="2Hr-hU-Mri"/>
+                        <outlet property="maintenanceTextField" destination="TMQ-Hb-5io" id="7Dy-Nf-1OF"/>
+                        <outlet property="oilTextField" destination="eC0-kF-dk6" id="6AW-ER-bdz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yin-zj-eGQ" userLabel="First Responder" sceneMemberID="firstResponder"/>

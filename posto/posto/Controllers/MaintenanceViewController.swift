@@ -13,8 +13,9 @@ class MaintenanceViewController: UIViewController {
     
 
     
-    @IBOutlet weak var oilTextField: UITextView!
-    @IBOutlet weak var maintenanceTextField: UITextView!
+    //@IBOutlet weak var oilTextField: UITextView!
+    @IBOutlet weak var oilTextField: UILabel!
+    @IBOutlet weak var maintenanceTextField: UILabel!
     
     
     override func viewDidLoad() {
