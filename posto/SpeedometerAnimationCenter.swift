@@ -1,8 +1,8 @@
 //
-//  SpeedometerAnimationRight.swift
+//  SpeedometerAnimationCenter.swift
 //  posto
 //
-//  Created by Matheus Santos Lopes on 19/06/15.
+//  Created by Matheus Santos Lopes on 22/06/15.
 //  Copyright (c) 2015 Davi Rodrigues. All rights reserved.
 //
 
@@ -11,8 +11,8 @@ import SpriteKit
 import AVFoundation
 
 
-public class SpeedometerAnimationRight: SKScene {
-   
+public class SpeedometerAnimationCenter: SKScene {
+    
     
     override public func didMoveToView(view: SKView) {
         var speedometerSprite: SKSpriteNode!
@@ -23,16 +23,7 @@ public class SpeedometerAnimationRight: SKScene {
         speedometerSprite.yScale = 0.3
         speedometerSprite.position = CGPointMake(frame.width / 2, frame.height / 2.1)
         self.addChild(speedometerSprite)
-        
-        let moveRight = SKAction.animateWithTextures([
-            SKTexture(imageNamed: "vel5"),
-            SKTexture(imageNamed: "vel6"),
-            SKTexture(imageNamed: "vel7")
-            ], timePerFrame: 0.2)
-        
-        let run = SKAction.repeatAction(moveRight, count: 1)
-        speedometerSprite.runAction(run, withKey: "runningRight")
     }
-
+    
     
 }

@@ -28,8 +28,8 @@ public class SpeedometerAnimationLeft: SKScene {
         let moveLeft = SKAction.animateWithTextures([
             SKTexture(imageNamed: "vel3"),
             SKTexture(imageNamed: "vel2"),
-            SKTexture(imageNamed: "vel1")
-            ], timePerFrame: 0.3)
+             SKTexture(imageNamed: "vel1")
+            ], timePerFrame: 0.2)
         
         let run = SKAction.repeatAction(moveLeft, count: 1)
         speedometerSprite.runAction(run, withKey: "runningLeft")
