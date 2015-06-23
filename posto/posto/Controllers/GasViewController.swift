@@ -95,9 +95,6 @@ class GasViewController: UIViewController, UITextFieldDelegate
         valResult = calculator.returnResultGasOrEtn(valGasFloat, valEtn: valGnvOrEtnFloat)
         
 
-            
-            
-        
         
         if  valResult == true {
             
