@@ -20,9 +20,14 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fCb-fO-Kh4">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Meu Carro" id="DJg-uW-gaw">
                                         <barButtonItem key="leftBarButtonItem" title="Voltar" id="bcO-4o-TKI">
+                                            <color key="tintColor" red="0.47450983520000001" green="0.47450983520000001" blue="0.47450983520000001" alpha="1" colorSpace="deviceRGB"/>
                                             <connections>
                                                 <segue destination="3sT-Hg-Nvd" kind="unwind" unwindAction="returnToMenu:" id="jUK-r2-M82"/>
                                             </connections>
@@ -32,6 +37,7 @@
                                                 <rect key="frame" x="-23" y="-15" width="83" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Salvar">
+                                                    <color key="titleColor" red="0.98431378599999997" green="0.058823533359999999" blue="0.15686275059999999" alpha="1" colorSpace="deviceRGB"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
@@ -61,7 +67,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quilometragem" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9RI-ji-MjR">
                                 <rect key="frame" x="41" y="319" width="118" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -70,12 +76,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="41" y="360" width="155" height="21"/>
+                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Última revisão" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6G-eD-y4c">
                                 <rect key="frame" x="41" y="399" width="109" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="41" y="400" width="109" height="21"/>
+                                </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Km" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VAG-FW-RSu">
                                 <rect key="frame" x="262" y="355.5" width="97" height="30"/>
@@ -98,6 +110,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="262" y="396" width="97" height="30"/>
+                                </variation>
                                 <connections>
                                     <outlet property="delegate" destination="URe-M8-4P9" id="Hh4-dz-9fU"/>
                                 </connections>
@@ -330,9 +345,14 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="mfm-Ha-F2I" secondAttribute="height" multiplier="375:44" id="J20-VK-rmY"/>
                                 </constraints>
+                                <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Manutenção" id="NQ6-A9-0xG">
                                         <barButtonItem key="leftBarButtonItem" title="Voltar" id="jab-c7-ysO">
+                                            <color key="tintColor" red="0.47450983520000001" green="0.47450983520000001" blue="0.47450983520000001" alpha="1" colorSpace="deviceRGB"/>
                                             <connections>
                                                 <segue destination="6Pf-ac-jxu" kind="unwind" unwindAction="returnToMenu:" id="kK7-Io-prc"/>
                                             </connections>
@@ -376,7 +396,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yin-zj-eGQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="6Pf-ac-jxu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1564.5" y="1811.5"/>
+            <point key="canvasLocation" x="1563.75" y="1785.5"/>
         </scene>
         <!--Gas View Controller-->
         <scene sceneID="tJJ-9g-vna">
@@ -392,9 +412,15 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1MG-jp-gIJ">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
                                 <items>
-                                    <navigationItem title="Etanol X Gasolina" id="GOv-fY-YZz">
+                                    <navigationItem title="Etanol ou Gasolina?" id="GOv-fY-YZz">
                                         <barButtonItem key="leftBarButtonItem" title="Voltar" id="Msf-UA-YNb">
+                                            <color key="tintColor" red="0.47450983520000001" green="0.47450983520000001" blue="0.47450983520000001" alpha="1" colorSpace="deviceRGB"/>
                                             <connections>
                                                 <segue destination="T0v-Ue-WXt" kind="unwind" unwindAction="returnToMenu:" id="b4r-7R-6h8"/>
                                             </connections>
@@ -419,7 +445,7 @@
                                 <accessibility key="accessibilityConfiguration" label=""/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="light"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="20"/>
                                     <rect key="frame" x="90" y="130" width="71" height="30"/>
@@ -439,7 +465,7 @@
                                 <rect key="frame" x="234" y="123" width="59" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="numberPad" keyboardAppearance="light"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="light"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="20"/>
                                     <rect key="frame" x="219" y="130" width="67" height="30"/>
@@ -509,7 +535,6 @@
                                 </variation>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="oNr-Ef-X9T"/>
@@ -536,7 +561,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zFx-XL-hXW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="T0v-Ue-WXt" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1583.25" y="830.5"/>
+            <point key="canvasLocation" x="1563.75" y="830.5"/>
         </scene>
     </scenes>
     <resources>

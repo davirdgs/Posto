@@ -16,9 +16,6 @@ public class SpeedometerAnimationLeft: SKScene {
         var speedometerSprite: SKSpriteNode!
         backgroundColor = SKColor.whiteColor()
         
-        //controle de gravidade inicial
-        //self.physicsWorld.gravity = CGVectorMake(0.0, 0.0)
-        
         speedometerSprite = SKSpriteNode(texture: SKTexture(imageNamed: "vel4"))
         speedometerSprite.xScale = 0.3
         speedometerSprite.yScale = 0.3

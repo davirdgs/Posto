@@ -32,6 +32,20 @@ public class SpeedometerAnimationRight: SKScene {
         
         let run = SKAction.repeatAction(moveRight, count: 1)
         speedometerSprite.runAction(run, withKey: "runningRight")
+        
+        
+        
+        var audioPlayer: AVAudioPlayer!
+        
+        if let path = NSBundle.mainBundle().pathForResource("sound2", ofType: "wav") {
+            audioPlayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: path), fileTypeHint: "wav", error: nil)
+            
+            if let sound = audioPlayer {
+                sound.prepareToPlay()
+                sound.play()
+            }
+        }
+        
     }
 
     

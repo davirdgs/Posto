@@ -24,6 +24,9 @@
 		636AA9E91B3498EF001378E9 /* SpeedometerAnimationLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636AA9E71B3498EF001378E9 /* SpeedometerAnimationLeft.swift */; };
 		636AA9EA1B3498EF001378E9 /* SpeedometerAnimationRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636AA9E81B3498EF001378E9 /* SpeedometerAnimationRight.swift */; };
 		636AA9EC1B3844CA001378E9 /* SpeedometerAnimationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636AA9EB1B3844CA001378E9 /* SpeedometerAnimationCenter.swift */; };
+		636AA9F01B38F2F9001378E9 /* sound3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 636AA9ED1B38F2F9001378E9 /* sound3.wav */; };
+		636AA9F11B38F2F9001378E9 /* sound2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 636AA9EE1B38F2F9001378E9 /* sound2.wav */; };
+		636AA9F21B38F2F9001378E9 /* sound1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 636AA9EF1B38F2F9001378E9 /* sound1.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,9 @@
 		636AA9E71B3498EF001378E9 /* SpeedometerAnimationLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedometerAnimationLeft.swift; sourceTree = "<group>"; };
 		636AA9E81B3498EF001378E9 /* SpeedometerAnimationRight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedometerAnimationRight.swift; sourceTree = "<group>"; };
 		636AA9EB1B3844CA001378E9 /* SpeedometerAnimationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpeedometerAnimationCenter.swift; path = ../../SpeedometerAnimationCenter.swift; sourceTree = "<group>"; };
+		636AA9ED1B38F2F9001378E9 /* sound3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = sound3.wav; path = ../sound3.wav; sourceTree = "<group>"; };
+		636AA9EE1B38F2F9001378E9 /* sound2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = sound2.wav; path = ../sound2.wav; sourceTree = "<group>"; };
+		636AA9EF1B38F2F9001378E9 /* sound1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = sound1.wav; path = ../sound1.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,9 @@
 		552A15AB1B25D9EA0092A01A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				636AA9ED1B38F2F9001378E9 /* sound3.wav */,
+				636AA9EE1B38F2F9001378E9 /* sound2.wav */,
+				636AA9EF1B38F2F9001378E9 /* sound1.wav */,
 				552A15AC1B25D9EA0092A01A /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -242,8 +251,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				636AA9F11B38F2F9001378E9 /* sound2.wav in Resources */,
 				552A15B61B25D9EA0092A01A /* Main.storyboard in Resources */,
 				552A15BB1B25D9EA0092A01A /* LaunchScreen.xib in Resources */,
+				636AA9F01B38F2F9001378E9 /* sound3.wav in Resources */,
+				636AA9F21B38F2F9001378E9 /* sound1.wav in Resources */,
 				552A15B81B25D9EA0092A01A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

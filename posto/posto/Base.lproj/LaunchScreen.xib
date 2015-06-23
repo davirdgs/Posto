@@ -18,7 +18,7 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Car" translatesAutoresizingMaskIntoConstraints="NO" id="gAn-5q-EQF">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Car" translatesAutoresizingMaskIntoConstraints="NO" id="gAn-5q-EQF">
                     <rect key="frame" x="144" y="303" width="193" height="128"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="199" id="OYV-cI-yXa"/>
