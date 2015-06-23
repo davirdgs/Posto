@@ -13,6 +13,10 @@ import AVFoundation
 
 public class SpeedometerAnimationRight: SKScene {
    
+    // Grab the path, make sure to add it to your project!
+    var sound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("sound1", ofType: "wav")!)
+    var audioPlayer = AVAudioPlayer()
+    
     
     override public func didMoveToView(view: SKView) {
         var speedometerSprite: SKSpriteNode!
@@ -32,6 +36,12 @@ public class SpeedometerAnimationRight: SKScene {
         
         let run = SKAction.repeatAction(moveRight, count: 1)
         speedometerSprite.runAction(run, withKey: "runningRight")
+        
+
+        audioPlayer = AVAudioPlayer(contentsOfURL: sound, error: nil)
+        audioPlayer.prepareToPlay()
+        
+        audioPlayer.play()
     }
 
     

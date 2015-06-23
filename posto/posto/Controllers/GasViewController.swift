@@ -74,6 +74,13 @@ class GasViewController: UIViewController, UITextFieldDelegate
     
     func buttonCalculate(sender: UIButton) {
         
+        
+        if textGasValue.text=="" || textGnvOrEtnValue.text==""
+        {
+            
+        }else
+        {
+        
         var valResult: Bool
         
         //fechar teclado virtual
@@ -87,7 +94,7 @@ class GasViewController: UIViewController, UITextFieldDelegate
         var valGnvOrEtnFloat = Float((textGnvOrEtnValue.text as NSString).floatValue)
         valResult = calculator.returnResultGasOrEtn(valGasFloat, valEtn: valGnvOrEtnFloat)
         
-        
+
         
         if  valResult == true {
             
@@ -108,7 +115,7 @@ class GasViewController: UIViewController, UITextFieldDelegate
             skView.presentScene(scene)
             
   
-            scene.removeAllActions()
+
             
         }else{
             textResult.text = "Abasteça com GASOLINA"
@@ -127,8 +134,8 @@ class GasViewController: UIViewController, UITextFieldDelegate
             skView.presentScene(scene)
             
         }
-        
-        
+   
+        }
         
 
     }
@@ -136,12 +143,19 @@ class GasViewController: UIViewController, UITextFieldDelegate
 
     
     @IBAction func textChanged(sender: UITextField, forEvent event: UIEvent) {
-        btnResult.hidden=false
+        
+        
+        
+        if btnResult.hidden==true
+        {
+            
+        
         
         imgResult.image = UIImage(named: "")
         
-        textGasValue.placeholder = "0.000"
-        textGnvOrEtnValue.placeholder = "0.000"
+        
+        textGasValue.text = ""
+        textGnvOrEtnValue.text = ""
         
         
         let scene = SpeedometerAnimationCenter(size: CGSize(width: 800, height: 600))
@@ -154,8 +168,11 @@ class GasViewController: UIViewController, UITextFieldDelegate
         scene.scaleMode = .AspectFill
         
         skView.presentScene(scene)
+            
+            btnResult.hidden=false
     }
     
+    }
     
     
     
