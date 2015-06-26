@@ -15,7 +15,6 @@
 		552A15BB1B25D9EA0092A01A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 552A15B91B25D9EA0092A01A /* LaunchScreen.xib */; };
 		552A15C71B25D9EA0092A01A /* postoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552A15C61B25D9EA0092A01A /* postoTests.swift */; };
 		552F61B91B2EF9F900F2217B /* MyCarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552F61B81B2EF9F900F2217B /* MyCarData.swift */; };
-		559136931B31B1F300A56C17 /* Maintenance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559136921B31B1F300A56C17 /* Maintenance.swift */; };
 		6313635E1B30F21E00BD009E /* CarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6313635A1B30F21E00BD009E /* CarViewController.swift */; };
 		6313635F1B30F21E00BD009E /* GasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6313635B1B30F21E00BD009E /* GasViewController.swift */; };
 		631363601B30F21E00BD009E /* MaintenanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6313635C1B30F21E00BD009E /* MaintenanceViewController.swift */; };
@@ -23,10 +22,11 @@
 		633FE4721B27AE990094F9CF /* GasCalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633FE4711B27AE990094F9CF /* GasCalculatorModel.swift */; };
 		636AA9E91B3498EF001378E9 /* SpeedometerAnimationLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636AA9E71B3498EF001378E9 /* SpeedometerAnimationLeft.swift */; };
 		636AA9EA1B3498EF001378E9 /* SpeedometerAnimationRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636AA9E81B3498EF001378E9 /* SpeedometerAnimationRight.swift */; };
-		636AA9EC1B3844CA001378E9 /* SpeedometerAnimationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636AA9EB1B3844CA001378E9 /* SpeedometerAnimationCenter.swift */; };
 		636AA9F01B38F2F9001378E9 /* sound3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 636AA9ED1B38F2F9001378E9 /* sound3.wav */; };
 		636AA9F11B38F2F9001378E9 /* sound2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 636AA9EE1B38F2F9001378E9 /* sound2.wav */; };
 		636AA9F21B38F2F9001378E9 /* sound1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 636AA9EF1B38F2F9001378E9 /* sound1.wav */; };
+		636AA9F81B3D7860001378E9 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636AA9F71B3D7860001378E9 /* DatabaseManager.swift */; };
+		636AA9FB1B3D9372001378E9 /* SpeedometerAnimationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636AA9FA1B3D9372001378E9 /* SpeedometerAnimationCenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,18 +52,18 @@
 		552A15C51B25D9EA0092A01A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		552A15C61B25D9EA0092A01A /* postoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postoTests.swift; sourceTree = "<group>"; };
 		552F61B81B2EF9F900F2217B /* MyCarData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCarData.swift; sourceTree = "<group>"; };
-		559136921B31B1F300A56C17 /* Maintenance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Maintenance.swift; sourceTree = "<group>"; };
 		6313635A1B30F21E00BD009E /* CarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarViewController.swift; sourceTree = "<group>"; };
 		6313635B1B30F21E00BD009E /* GasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GasViewController.swift; sourceTree = "<group>"; };
 		6313635C1B30F21E00BD009E /* MaintenanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaintenanceViewController.swift; sourceTree = "<group>"; };
 		6313635D1B30F21E00BD009E /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		633FE4711B27AE990094F9CF /* GasCalculatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GasCalculatorModel.swift; sourceTree = "<group>"; };
-		636AA9E71B3498EF001378E9 /* SpeedometerAnimationLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedometerAnimationLeft.swift; sourceTree = "<group>"; };
-		636AA9E81B3498EF001378E9 /* SpeedometerAnimationRight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedometerAnimationRight.swift; sourceTree = "<group>"; };
-		636AA9EB1B3844CA001378E9 /* SpeedometerAnimationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpeedometerAnimationCenter.swift; path = ../../SpeedometerAnimationCenter.swift; sourceTree = "<group>"; };
+		636AA9E71B3498EF001378E9 /* SpeedometerAnimationLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpeedometerAnimationLeft.swift; path = posto/Models/SpeedometerAnimationLeft.swift; sourceTree = "<group>"; };
+		636AA9E81B3498EF001378E9 /* SpeedometerAnimationRight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpeedometerAnimationRight.swift; path = posto/Models/SpeedometerAnimationRight.swift; sourceTree = "<group>"; };
 		636AA9ED1B38F2F9001378E9 /* sound3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = sound3.wav; path = ../sound3.wav; sourceTree = "<group>"; };
 		636AA9EE1B38F2F9001378E9 /* sound2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = sound2.wav; path = ../sound2.wav; sourceTree = "<group>"; };
 		636AA9EF1B38F2F9001378E9 /* sound1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = sound1.wav; path = ../sound1.wav; sourceTree = "<group>"; };
+		636AA9F71B3D7860001378E9 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatabaseManager.swift; path = ../../DatabaseManager.swift; sourceTree = "<group>"; };
+		636AA9FA1B3D9372001378E9 /* SpeedometerAnimationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpeedometerAnimationCenter.swift; path = posto/Models/SpeedometerAnimationCenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +87,6 @@
 		552A159F1B25D9EA0092A01A = {
 			isa = PBXGroup;
 			children = (
-				631363591B30F21E00BD009E /* Controllers */,
 				552A15AA1B25D9EA0092A01A /* posto */,
 				552A15C31B25D9EA0092A01A /* postoTests */,
 				552A15A91B25D9EA0092A01A /* Products */,
@@ -107,8 +106,10 @@
 			isa = PBXGroup;
 			children = (
 				633FE4701B27AE990094F9CF /* Models */,
-				552A15AD1B25D9EA0092A01A /* AppDelegate.swift */,
+				631363591B30F21E00BD009E /* Controllers */,
+				636AA9F91B3D7BCF001378E9 /* Views */,
 				552A15B21B25D9EA0092A01A /* ViewController.swift */,
+				552A15AD1B25D9EA0092A01A /* AppDelegate.swift */,
 				552A15B41B25D9EA0092A01A /* Main.storyboard */,
 				552A15B71B25D9EA0092A01A /* Images.xcassets */,
 				552A15B91B25D9EA0092A01A /* LaunchScreen.xib */,
@@ -154,21 +155,28 @@
 				6313635C1B30F21E00BD009E /* MaintenanceViewController.swift */,
 				6313635D1B30F21E00BD009E /* MenuViewController.swift */,
 			);
-			name = Controllers;
-			path = posto/Controllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		633FE4701B27AE990094F9CF /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				636AA9E71B3498EF001378E9 /* SpeedometerAnimationLeft.swift */,
-				636AA9E81B3498EF001378E9 /* SpeedometerAnimationRight.swift */,
-				636AA9EB1B3844CA001378E9 /* SpeedometerAnimationCenter.swift */,
 				633FE4711B27AE990094F9CF /* GasCalculatorModel.swift */,
 				552F61B81B2EF9F900F2217B /* MyCarData.swift */,
-				559136921B31B1F300A56C17 /* Maintenance.swift */,
+				636AA9F71B3D7860001378E9 /* DatabaseManager.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		636AA9F91B3D7BCF001378E9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				636AA9E71B3498EF001378E9 /* SpeedometerAnimationLeft.swift */,
+				636AA9E81B3498EF001378E9 /* SpeedometerAnimationRight.swift */,
+				636AA9FA1B3D9372001378E9 /* SpeedometerAnimationCenter.swift */,
+			);
+			name = Views;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,17 +282,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				636AA9FB1B3D9372001378E9 /* SpeedometerAnimationCenter.swift in Sources */,
 				6313635F1B30F21E00BD009E /* GasViewController.swift in Sources */,
 				633FE4721B27AE990094F9CF /* GasCalculatorModel.swift in Sources */,
-				636AA9EC1B3844CA001378E9 /* SpeedometerAnimationCenter.swift in Sources */,
 				552F61B91B2EF9F900F2217B /* MyCarData.swift in Sources */,
 				6313635E1B30F21E00BD009E /* CarViewController.swift in Sources */,
 				636AA9E91B3498EF001378E9 /* SpeedometerAnimationLeft.swift in Sources */,
+				636AA9F81B3D7860001378E9 /* DatabaseManager.swift in Sources */,
 				636AA9EA1B3498EF001378E9 /* SpeedometerAnimationRight.swift in Sources */,
 				631363611B30F21E00BD009E /* MenuViewController.swift in Sources */,
 				552A15B31B25D9EA0092A01A /* ViewController.swift in Sources */,
 				631363601B30F21E00BD009E /* MaintenanceViewController.swift in Sources */,
-				559136931B31B1F300A56C17 /* Maintenance.swift in Sources */,
 				552A15AE1B25D9EA0092A01A /* AppDelegate.swift in Sources */,
 				552A15B11B25D9EA0092A01A /* posto.xcdatamodeld in Sources */,
 			);
