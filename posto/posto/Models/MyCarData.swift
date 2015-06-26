@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import CoreData
 
- class MyCarData: NSObject {
+ class MyCarData: NSManagedObject {
     
     static var km: NSNumber = 0.0
     static var oil: NSNumber = 0.0
